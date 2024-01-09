@@ -1,24 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ErrorNilUnit2Homeworks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="tig-3R-C6k">
+                                <rect key="frame" x="18.999999999999993" y="62" width="119.33333333333331" height="107"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Меня зовут:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBz-er-m9H">
+                                        <rect key="frame" x="0.0" y="0.0" width="100.66666666666667" height="23"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Моя фамилия:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-3E-x1J">
+                                        <rect key="frame" x="0.0" y="42" width="119.33333333333333" height="23"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Моя группа:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRJ-Ka-ZCL">
+                                        <rect key="frame" x="0.0" y="84" width="102" height="23"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vn-af-rfp">
+                                <rect key="frame" x="154" y="62" width="36.333333333333343" height="23"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mc-GB-LxI">
+                                <rect key="frame" x="154" y="104" width="76.333333333333314" height="23"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Группа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUl-Qi-Lcc">
+                                <rect key="frame" x="154" y="146" width="58" height="23"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNe-ca-uWg">
+                                <rect key="frame" x="19" y="199" width="116" height="50"/>
+                                <color key="backgroundColor" red="0.23811621620000001" green="0.66185756279999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MKM-hu-srT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="QKz-RQ-DNW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Моё имя"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapFirstname" destination="BYZ-38-t0r" eventType="touchUpInside" id="ao2-f5-lyd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc7-zn-pow">
+                                <rect key="frame" x="154" y="199" width="220" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.46839866540000002" blue="0.52880938219999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Моя фамилия"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapSecondName" destination="BYZ-38-t0r" eventType="touchUpInside" id="DBw-Qd-qS7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OS0-UX-YUL">
+                                <rect key="frame" x="19" y="273" width="355" height="50"/>
+                                <color key="backgroundColor" red="0.61056624650000002" green="0.271775082" blue="0.96841150519999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Моя группа на курсе"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapNumberOfGroup" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ye0-ee-rZe"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="eMI-lx-sv3">
+                                <rect key="frame" x="19" y="353" width="355" height="140"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введи имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-HX-Rok">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no"/>
+                                        <connections>
+                                            <action selector="setFirstName:" destination="BYZ-38-t0r" eventType="editingChanged" id="Fy7-SG-dHv"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="9gc-O0-2gB"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введи фамилию" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KXj-jI-MCt">
+                                        <rect key="frame" x="0.0" y="53" width="355" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no"/>
+                                        <connections>
+                                            <action selector="setLastName:" destination="BYZ-38-t0r" eventType="editingChanged" id="5jc-Iy-lrw"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="GA4-BA-vCQ"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введи номер группы" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JZv-g3-frf">
+                                        <rect key="frame" x="0.0" y="106" width="355" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no"/>
+                                        <connections>
+                                            <action selector="setNumberOfGroup:" destination="BYZ-38-t0r" eventType="editingChanged" id="esn-1q-Yvp"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="SeF-VS-elW"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXp-E8-QPC">
+                                <rect key="frame" x="19" y="517" width="355" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jrj-Pq-6Oz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Обновить"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61t-Vz-ItT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OS0-UX-YUL" firstAttribute="leading" secondItem="vNe-ca-uWg" secondAttribute="leading" id="0en-eN-pff"/>
+                            <constraint firstItem="OS0-UX-YUL" firstAttribute="height" secondItem="vNe-ca-uWg" secondAttribute="height" id="7Vy-Lo-I4E"/>
+                            <constraint firstItem="OXp-E8-QPC" firstAttribute="top" secondItem="eMI-lx-sv3" secondAttribute="bottom" constant="24" id="7oC-fO-BRW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="9mc-GB-LxI" secondAttribute="trailing" constant="162.66666666666669" id="8bI-Oz-dXp"/>
+                            <constraint firstItem="eUl-Qi-Lcc" firstAttribute="leading" secondItem="uRJ-Ka-ZCL" secondAttribute="trailing" constant="33" id="AHh-pu-8aF"/>
+                            <constraint firstItem="eUl-Qi-Lcc" firstAttribute="centerY" secondItem="uRJ-Ka-ZCL" secondAttribute="centerY" id="J8F-VX-JG2"/>
+                            <constraint firstItem="eMI-lx-sv3" firstAttribute="top" secondItem="OS0-UX-YUL" secondAttribute="bottom" constant="30" id="LAM-y4-kdE"/>
+                            <constraint firstItem="OS0-UX-YUL" firstAttribute="top" secondItem="vNe-ca-uWg" secondAttribute="bottom" constant="24" id="UqW-PH-A4j"/>
+                            <constraint firstItem="OS0-UX-YUL" firstAttribute="trailing" secondItem="Wc7-zn-pow" secondAttribute="trailing" id="WWP-Xc-Phq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="4vn-af-rfp" secondAttribute="trailing" constant="202.66666666666666" id="Ykh-bt-CLe"/>
+                            <constraint firstItem="9mc-GB-LxI" firstAttribute="centerY" secondItem="hxk-3E-x1J" secondAttribute="centerY" id="ZUd-jg-uaN"/>
+                            <constraint firstItem="OXp-E8-QPC" firstAttribute="trailing" secondItem="eMI-lx-sv3" secondAttribute="trailing" id="aJg-vk-tua"/>
+                            <constraint firstItem="tig-3R-C6k" firstAttribute="leading" secondItem="vNe-ca-uWg" secondAttribute="leading" id="aMY-9x-pnj"/>
+                            <constraint firstItem="9mc-GB-LxI" firstAttribute="leading" secondItem="hxk-3E-x1J" secondAttribute="trailing" constant="15.666666666666686" id="d9I-bb-lnq"/>
+                            <constraint firstItem="vNe-ca-uWg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="eNF-g0-ic5"/>
+                            <constraint firstItem="vNe-ca-uWg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="f1H-WR-Ml8"/>
+                            <constraint firstItem="OXp-E8-QPC" firstAttribute="leading" secondItem="eMI-lx-sv3" secondAttribute="leading" id="fj0-AD-9R1"/>
+                            <constraint firstItem="eMI-lx-sv3" firstAttribute="leading" secondItem="OS0-UX-YUL" secondAttribute="leading" id="fzb-D4-53r"/>
+                            <constraint firstItem="4vn-af-rfp" firstAttribute="top" secondItem="tig-3R-C6k" secondAttribute="top" id="lcX-9X-GnE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wc7-zn-pow" secondAttribute="trailing" constant="19" id="nmx-Sl-4HV"/>
+                            <constraint firstItem="Wc7-zn-pow" firstAttribute="height" secondItem="vNe-ca-uWg" secondAttribute="height" id="p6h-V6-Jqy"/>
+                            <constraint firstItem="eMI-lx-sv3" firstAttribute="trailing" secondItem="OS0-UX-YUL" secondAttribute="trailing" id="pUh-n2-RsQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="eUl-Qi-Lcc" secondAttribute="trailing" constant="181" id="t09-1a-SRn"/>
+                            <constraint firstItem="4vn-af-rfp" firstAttribute="leading" secondItem="aBz-er-m9H" secondAttribute="trailing" constant="34.333333333333343" id="vMF-CT-jrZ"/>
+                            <constraint firstItem="Wc7-zn-pow" firstAttribute="leading" secondItem="vNe-ca-uWg" secondAttribute="trailing" constant="19" id="wd0-ES-uqd"/>
+                            <constraint firstItem="Wc7-zn-pow" firstAttribute="centerY" secondItem="vNe-ca-uWg" secondAttribute="centerY" id="xcj-lm-MGZ"/>
+                            <constraint firstItem="vNe-ca-uWg" firstAttribute="top" secondItem="tig-3R-C6k" secondAttribute="bottom" constant="30" id="yjt-qV-I5A"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstNameLabel" destination="4vn-af-rfp" id="2iO-E1-87G"/>
+                        <outlet property="firstNameTextField" destination="9TW-HX-Rok" id="ee2-ZJ-emG"/>
+                        <outlet property="lastNameLabel" destination="9mc-GB-LxI" id="Jy5-20-eze"/>
+                        <outlet property="lastNameTextField" destination="KXj-jI-MCt" id="AE7-yQ-vu5"/>
+                        <outlet property="numberOfGroupLabel" destination="eUl-Qi-Lcc" id="yhf-Gf-5pW"/>
+                        <outlet property="numberOfGroupTextField" destination="JZv-g3-frf" id="ZlR-jf-Kz6"/>
+                        <outlet property="saveButton" destination="OXp-E8-QPC" id="3sv-IM-CHs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
