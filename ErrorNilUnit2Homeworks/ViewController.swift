@@ -2,7 +2,7 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    // // MARK: - IB Outlets
+    // MARK: - IB Outlets
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var numberOfGroupLabel: UILabel!
@@ -13,7 +13,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var numberOfGroupTextField: UITextField!
     
-    // // MARK: - Private Properties
+    // MARK: - Private Properties
     private let myFirstName = "Алексей"
     private let myLastName = "Петренко"
     private let myNumberOfGroup = "6"
