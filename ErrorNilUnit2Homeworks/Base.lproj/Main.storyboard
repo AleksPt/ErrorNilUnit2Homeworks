@@ -74,7 +74,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didTapFirstname" destination="BYZ-38-t0r" eventType="touchUpInside" id="ao2-f5-lyd"/>
+                                    <action selector="didTapFirstName" destination="BYZ-38-t0r" eventType="touchUpInside" id="ao2-f5-lyd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc7-zn-pow">
@@ -117,25 +117,25 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no"/>
                                         <connections>
-                                            <action selector="setFirstName:" destination="BYZ-38-t0r" eventType="editingChanged" id="Fy7-SG-dHv"/>
+                                            <action selector="inputFirstName:" destination="BYZ-38-t0r" eventType="editingChanged" id="tw3-S1-CUU"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="9gc-O0-2gB"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введи фамилию" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KXj-jI-MCt">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введи фамилию" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KXj-jI-MCt">
                                         <rect key="frame" x="0.0" y="53" width="355" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no"/>
                                         <connections>
-                                            <action selector="setLastName:" destination="BYZ-38-t0r" eventType="editingChanged" id="5jc-Iy-lrw"/>
+                                            <action selector="inputLastName:" destination="BYZ-38-t0r" eventType="editingChanged" id="VOs-vf-42U"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="GA4-BA-vCQ"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введи номер группы" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JZv-g3-frf">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введи номер группы" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JZv-g3-frf">
                                         <rect key="frame" x="0.0" y="106" width="355" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no"/>
                                         <connections>
-                                            <action selector="setNumberOfGroup:" destination="BYZ-38-t0r" eventType="editingChanged" id="esn-1q-Yvp"/>
+                                            <action selector="inputNumberOfGroup:" destination="BYZ-38-t0r" eventType="editingChanged" id="1o5-t1-eia"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="SeF-VS-elW"/>
                                         </connections>
                                     </textField>
@@ -160,6 +160,20 @@
                                     <action selector="didTapSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61t-Vz-ItT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rL-4L-Kkj">
+                                <rect key="frame" x="19" y="768" width="355" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0so-Dp-6J6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Сбросить"/>
+                                <connections>
+                                    <action selector="pressedReset" destination="BYZ-38-t0r" eventType="touchUpInside" id="KtX-Vj-lKp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -168,11 +182,13 @@
                             <constraint firstItem="OS0-UX-YUL" firstAttribute="height" secondItem="vNe-ca-uWg" secondAttribute="height" id="7Vy-Lo-I4E"/>
                             <constraint firstItem="OXp-E8-QPC" firstAttribute="top" secondItem="eMI-lx-sv3" secondAttribute="bottom" constant="24" id="7oC-fO-BRW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="9mc-GB-LxI" secondAttribute="trailing" constant="162.66666666666669" id="8bI-Oz-dXp"/>
+                            <constraint firstItem="1rL-4L-Kkj" firstAttribute="trailing" secondItem="OXp-E8-QPC" secondAttribute="trailing" id="9Cc-Pu-mFk"/>
                             <constraint firstItem="eUl-Qi-Lcc" firstAttribute="leading" secondItem="uRJ-Ka-ZCL" secondAttribute="trailing" constant="33" id="AHh-pu-8aF"/>
                             <constraint firstItem="eUl-Qi-Lcc" firstAttribute="centerY" secondItem="uRJ-Ka-ZCL" secondAttribute="centerY" id="J8F-VX-JG2"/>
                             <constraint firstItem="eMI-lx-sv3" firstAttribute="top" secondItem="OS0-UX-YUL" secondAttribute="bottom" constant="30" id="LAM-y4-kdE"/>
                             <constraint firstItem="OS0-UX-YUL" firstAttribute="top" secondItem="vNe-ca-uWg" secondAttribute="bottom" constant="24" id="UqW-PH-A4j"/>
                             <constraint firstItem="OS0-UX-YUL" firstAttribute="trailing" secondItem="Wc7-zn-pow" secondAttribute="trailing" id="WWP-Xc-Phq"/>
+                            <constraint firstItem="1rL-4L-Kkj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XoA-AE-ZqQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="4vn-af-rfp" secondAttribute="trailing" constant="202.66666666666666" id="Ykh-bt-CLe"/>
                             <constraint firstItem="9mc-GB-LxI" firstAttribute="centerY" secondItem="hxk-3E-x1J" secondAttribute="centerY" id="ZUd-jg-uaN"/>
                             <constraint firstItem="OXp-E8-QPC" firstAttribute="trailing" secondItem="eMI-lx-sv3" secondAttribute="trailing" id="aJg-vk-tua"/>
@@ -185,6 +201,7 @@
                             <constraint firstItem="4vn-af-rfp" firstAttribute="top" secondItem="tig-3R-C6k" secondAttribute="top" id="lcX-9X-GnE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wc7-zn-pow" secondAttribute="trailing" constant="19" id="nmx-Sl-4HV"/>
                             <constraint firstItem="Wc7-zn-pow" firstAttribute="height" secondItem="vNe-ca-uWg" secondAttribute="height" id="p6h-V6-Jqy"/>
+                            <constraint firstItem="1rL-4L-Kkj" firstAttribute="leading" secondItem="OXp-E8-QPC" secondAttribute="leading" id="pFU-Ph-6QZ"/>
                             <constraint firstItem="eMI-lx-sv3" firstAttribute="trailing" secondItem="OS0-UX-YUL" secondAttribute="trailing" id="pUh-n2-RsQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="eUl-Qi-Lcc" secondAttribute="trailing" constant="181" id="t09-1a-SRn"/>
                             <constraint firstItem="4vn-af-rfp" firstAttribute="leading" secondItem="aBz-er-m9H" secondAttribute="trailing" constant="34.333333333333343" id="vMF-CT-jrZ"/>

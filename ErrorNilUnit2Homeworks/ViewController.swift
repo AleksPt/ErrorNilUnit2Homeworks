@@ -14,9 +14,9 @@ final class ViewController: UIViewController {
     @IBOutlet weak var numberOfGroupTextField: UITextField!
     
     // MARK: - Private Properties
-    private let myFirstName = "Алексей"
-    private let myLastName = "Петренко"
-    private let myNumberOfGroup = "6"
+    private var myFirstName: String? = "Алексей"
+    private var myLastName: String? = "Петренко"
+    private var myNumberOfGroup: String? = "6"
     
     // MARK: - View Life Cycles
     override func viewDidLoad() {
@@ -27,44 +27,60 @@ final class ViewController: UIViewController {
         numberOfGroupLabel.text = ""
         
         saveButton.isEnabled = false
+        //        saveButton.layer.borderWidth
     }
     
     // MARK: - IB Actions
-    @IBAction func didTapFirstname() {
+    @IBAction func didTapFirstName() {
         firstNameLabel.text = myFirstName
-        clearTextFields()
     }
     
     @IBAction func didTapSecondName() {
         lastNameLabel.text = myLastName
-        clearTextFields()
     }
     
     @IBAction func didTapNumberOfGroup() {
         numberOfGroupLabel.text = myNumberOfGroup
-        clearTextFields()
     }
     
-    @IBAction func setFirstName(_ sender: UITextField) {
+    @IBAction func inputFirstName(_ sender: UITextField) {
         saveButton.isEnabled = true
     }
-    
-    @IBAction func setLastName(_ sender: UITextField) {
+    @IBAction func inputLastName(_ sender: UITextField) {
         saveButton.isEnabled = true
     }
-    
-    @IBAction func setNumberOfGroup(_ sender: UITextField) {
+    @IBAction func inputNumberOfGroup(_ sender: UITextField) {
         saveButton.isEnabled = true
     }
     
     @IBAction func didTapSave(_ sender: UIButton) {
-        firstNameLabel.text = firstNameTextField.text
-        lastNameLabel.text = lastNameTextField.text
-        numberOfGroupLabel.text = numberOfGroupTextField.text
+        if firstNameTextField.hasText {
+            myFirstName = firstNameTextField.text
+            firstNameLabel.text = myFirstName
+        }
+        
+        if lastNameTextField.hasText {
+            myLastName = lastNameTextField.text
+            lastNameLabel.text = myLastName
+        }
+        
+        if numberOfGroupTextField.hasText {
+            myNumberOfGroup = numberOfGroupTextField.text
+            numberOfGroupLabel.text = myNumberOfGroup
+        }
         
         clearTextFields()
-        
         saveButton.isEnabled = false
+    }
+    
+    @IBAction func pressedReset() {
+        myFirstName = "Алексей"
+        myLastName = "Петренко"
+        myNumberOfGroup = "6"
+        
+        firstNameLabel.text = myFirstName
+        lastNameLabel.text = myLastName
+        numberOfGroupLabel.text = myNumberOfGroup
     }
     
     // MARK: - Private Methods
@@ -77,12 +93,17 @@ final class ViewController: UIViewController {
 
 // MARK: - UITextFieldDelegate
 extension ViewController: UITextFieldDelegate {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(
+        _ touches: Set<UITouch>,
+        with event: UIEvent?
+    ) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(
+        _ textField: UITextField
+    ) -> Bool {
         if textField == firstNameTextField {
             lastNameTextField.becomeFirstResponder()
         } else if textField == lastNameTextField {
