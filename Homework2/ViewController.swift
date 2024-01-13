@@ -35,7 +35,7 @@ final class ViewController: UIViewController {
         let emailTF = UITextField()
         emailTF.frame = CGRect(
             x: view.frame.size.width - view.frame.size.width + 33,
-            y: view.frame.size.height - view.frame.size.height + 359,
+            y: passwordTextField.frame.minY - passwordTextField.frame.size.height - 21,
             width: view.frame.size.width - 66,
             height: 50
         )
@@ -50,7 +50,7 @@ final class ViewController: UIViewController {
         let emailTF = UITextField()
         emailTF.frame = CGRect(
             x: view.frame.size.width - view.frame.size.width + 33,
-            y: view.frame.size.height - view.frame.size.height + 430,
+            y: view.frame.midY,
             width: view.frame.size.width - 66,
             height: 50
         )
@@ -60,12 +60,12 @@ final class ViewController: UIViewController {
         emailTF.padding(size: 23)
         return emailTF
     }()
-    
+
     lazy var enterButton = {
         let button = UIButton(primaryAction: enterAction)
         button.frame = CGRect(
             x: view.frame.size.width - view.frame.size.width + 33,
-            y: view.frame.size.height - view.frame.size.height + 525,
+            y: passwordTextField.frame.maxY + 45,
             width: view.frame.size.width - 66,
             height: 50
         )
@@ -86,7 +86,7 @@ final class ViewController: UIViewController {
         let button = UIButton(primaryAction: registrationAction)
         button.frame = CGRect(
             x: view.frame.size.width - view.frame.size.width + 33,
-            y: view.frame.size.height - view.frame.size.height + 591,
+            y: enterButton.frame.maxY + 16,
             width: view.frame.size.width - 66,
             height: 19
         )
