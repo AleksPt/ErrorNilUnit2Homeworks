@@ -85,15 +85,17 @@ final class SettingsViewController: UIViewController {
     }()
     
     lazy var saveAction = UIAction { _ in
-        self.isContainsNumbers = false
-        self.checkNumberInTextField()
-        guard !self.isContainsNumbers else { return }
-        self.delegate?.setLabelText(
-            firstName: self.firstNameTextField.text ?? "",
-            secondName: self.secondNameTextField.text ?? ""
-        )
-        self.view.endEditing(true)
-        self.navigationController?.popViewController(animated: true)
+        if self.firstNameTextField.hasText || self.secondNameTextField.hasText {
+            self.isContainsNumbers = false
+            self.checkNumberInTextField()
+            guard !self.isContainsNumbers else { return }
+            self.delegate?.setLabelText(
+                firstName: self.firstNameTextField.text ?? "",
+                secondName: self.secondNameTextField.text ?? ""
+            )
+            self.view.endEditing(true)
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     override func viewDidLoad() {
@@ -109,10 +111,9 @@ final class SettingsViewController: UIViewController {
         view.addSubview(firstNameTextField)
         view.addSubview(secondNameTextField)
         view.addSubview(saveButton)
-        
     }
     
-    func checkNumberInTextField() {
+    private func checkNumberInTextField() {
         guard let firstName = self.firstNameTextField.text else { return }
         guard let secondName = self.secondNameTextField.text else { return }
         for character in firstName {
@@ -163,5 +164,12 @@ extension SettingsViewController {
         
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+extension SettingsViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 }
