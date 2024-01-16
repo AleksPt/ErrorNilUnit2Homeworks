@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     var name = "Iron Man"
     let countFriends = 10
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     
     // MARK: - Settings Button
     lazy var settingsButton = {
-        let button = UIButton()
+        let button = UIButton(primaryAction: settingsButtonAction)
         button.setTitleColor(.systemBlue, for: .normal)
         button.setTitle("Настройки", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16)
@@ -50,6 +50,12 @@ class ViewController: UIViewController {
         )
         return button
     }()
+    
+    // MARK: - Settings Button Action
+    lazy var settingsButtonAction = UIAction { _ in
+        let settingsViewController = SettingsViewController()
+        self.navigationController?.pushViewController(settingsViewController, animated: true)
+    }
     
     // MARK: - View
     lazy var rectangleLeftView = {
@@ -215,7 +221,5 @@ class ViewController: UIViewController {
         view.addSubview(textSubscribesLabel)
         view.addSubview(textFavouritesLabel)
         view.addSubview(imageView)
-
     }
 }
-
