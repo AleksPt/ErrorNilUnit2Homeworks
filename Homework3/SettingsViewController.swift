@@ -4,6 +4,9 @@ import UIKit
 
 final class SettingsViewController: UIViewController {
     
+    let numbers: [Character] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+    var isContainsNumbers = false
+    
     var delegate: ViewControllerDelegate?
     
     lazy var descriptionLabel = {
@@ -82,13 +85,14 @@ final class SettingsViewController: UIViewController {
     }()
     
     lazy var saveAction = UIAction { _ in
+        self.isContainsNumbers = false
+        self.checkNumberInTextField()
+        guard !self.isContainsNumbers else { return }
         self.delegate?.setLabelText(
             firstName: self.firstNameTextField.text ?? "",
             secondName: self.secondNameTextField.text ?? ""
         )
         self.view.endEditing(true)
-        self.firstNameTextField.text = ""
-        self.secondNameTextField.text = ""
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -107,6 +111,27 @@ final class SettingsViewController: UIViewController {
         view.addSubview(saveButton)
         
     }
+    
+    func checkNumberInTextField() {
+        guard let firstName = self.firstNameTextField.text else { return }
+        guard let secondName = self.secondNameTextField.text else { return }
+        for character in firstName {
+            if self.numbers.contains(character) {
+                isContainsNumbers = true
+                showAlert()
+                self.firstNameTextField.text = .none
+                self.secondNameTextField.text = .none
+            }
+        }
+        for character in secondName {
+            if self.numbers.contains(character) {
+                isContainsNumbers = true
+                showAlert()
+                self.firstNameTextField.text = .none
+                self.secondNameTextField.text = .none
+            }
+        }
+    }
 }
 
 extension UITextField {
@@ -123,9 +148,20 @@ extension UITextField {
     }
 }
 
-extension SettingsViewController: UITextFieldDelegate {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
+extension SettingsViewController {
+    func showAlert() {
+        let alert = UIAlertController(
+            title: "👹",
+            message: "Не используйте цифры",
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(
+            title: "Извините",
+            style: .cancel
+        )
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
