@@ -30,6 +30,21 @@ class ViewController: UIViewController {
         return label
     }()
     
+    lazy var settingsButton = {
+        let button = UIButton()
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitle("Настройки", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.frame.origin.y = nameLabel.frame.maxY + 8
+        button.frame = CGRect(
+            x: view.frame.midX - 43,
+            y: nameLabel.frame.maxY + 8,
+            width: 86,
+            height: 19
+        )
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +53,7 @@ class ViewController: UIViewController {
         
         view.addSubview(avatar)
         view.addSubview(nameLabel)
+        view.addSubview(settingsButton)
     }
 }
 
