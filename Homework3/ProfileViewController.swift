@@ -1,8 +1,11 @@
 import UIKit
 
-final class ViewController: UIViewController {
+protocol ViewControllerDelegate {
+    func setLabelText(firstName: String, secondName: String)
+}
+
+final class ViewController: UIViewController, ViewControllerDelegate {
     
-    var name = "Iron Man"
     let countFriends = 10
     let countSubscribes = 20
     let countFavourites = 30
@@ -23,7 +26,7 @@ final class ViewController: UIViewController {
     // MARK: - First name and Second Name
     lazy var nameLabel = {
         let label = UILabel()
-        label.text = name
+        label.text = "Iron Man"
         label.font = .boldSystemFont(ofSize: 20)
         label.textAlignment = .center
         label.frame = CGRect(
@@ -54,6 +57,7 @@ final class ViewController: UIViewController {
     // MARK: - Settings Button Action
     lazy var settingsButtonAction = UIAction { _ in
         let settingsViewController = SettingsViewController()
+        settingsViewController.delegate = self
         self.navigationController?.pushViewController(settingsViewController, animated: true)
     }
     
@@ -196,7 +200,7 @@ final class ViewController: UIViewController {
             width: rectangleRightView.frame.maxX - 30,
             height: 250
         )
-        image.layer.cornerRadius = 10
+        image.layer.cornerRadius = 20
         image.clipsToBounds = true
         image.contentMode = .scaleAspectFill
         return image
@@ -221,5 +225,9 @@ final class ViewController: UIViewController {
         view.addSubview(textSubscribesLabel)
         view.addSubview(textFavouritesLabel)
         view.addSubview(imageView)
+    }
+    
+    func setLabelText(firstName: String, secondName: String) {
+        self.nameLabel.text = firstName + " " + secondName
     }
 }
