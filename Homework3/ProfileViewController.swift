@@ -180,6 +180,22 @@ class ViewController: UIViewController {
         return label
     }()
     
+    // MARK: - ImageView
+    lazy var imageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "iAmIronman")
+        image.frame = CGRect(
+            x: view.frame.minX + 31,
+            y: rectangleCenterView.frame.maxY + 42,
+            width: rectangleRightView.frame.maxX - 30,
+            height: 250
+        )
+        image.layer.cornerRadius = 10
+        image.clipsToBounds = true
+        image.contentMode = .scaleAspectFill
+        return image
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -198,6 +214,8 @@ class ViewController: UIViewController {
         view.addSubview(textFriendsLabel)
         view.addSubview(textSubscribesLabel)
         view.addSubview(textFavouritesLabel)
+        view.addSubview(imageView)
+
     }
 }
 
