@@ -4,13 +4,8 @@ protocol ViewControllerDelegate {
     func setLabelText(firstName: String, secondName: String)
 }
 
-final class ViewController: UIViewController, ViewControllerDelegate {
+final class ViewController: UIViewController {
     
-    let countFriends = 10
-    let countSubscribes = 20
-    let countFavourites = 30
-    
-    // MARK: - Avatar
     lazy var avatar = {
         let avatar = UIImageView()
         avatar.image = UIImage(named: "avatar")
@@ -23,7 +18,6 @@ final class ViewController: UIViewController, ViewControllerDelegate {
         return avatar
     }()
     
-    // MARK: - First name and Second Name
     lazy var nameLabel = {
         let label = UILabel()
         label.text = "Iron Man"
@@ -38,7 +32,6 @@ final class ViewController: UIViewController, ViewControllerDelegate {
         return label
     }()
     
-    // MARK: - Settings Button
     lazy var settingsButton = {
         let button = UIButton(primaryAction: settingsButtonAction)
         button.setTitleColor(.systemBlue, for: .normal)
@@ -54,151 +47,20 @@ final class ViewController: UIViewController, ViewControllerDelegate {
         return button
     }()
     
-    // MARK: - Settings Button Action
     lazy var settingsButtonAction = UIAction { _ in
         let settingsViewController = SettingsViewController()
         settingsViewController.delegate = self
         self.navigationController?.pushViewController(settingsViewController, animated: true)
     }
-    
-    // MARK: - View
-    lazy var rectangleLeftView = {
-        let rect = UIView()
-        rect.backgroundColor = UIColor(
-            red: 242/255,
-            green: 242/255,
-            blue: 242/255,
-            alpha: 1
-        )
-        rect.layer.cornerRadius = 10
-        rect.frame = CGRect(
-            x: view.frame.minX + 30,
-            y: settingsButton.frame.maxY + 32,
-            width: 109,
-            height: 79
-        )
-        return rect
-    }()
-    
-    lazy var rectangleCenterView = {
-        let rect = UIView()
-        rect.backgroundColor = UIColor(
-            red: 242/255,
-            green: 242/255,
-            blue: 242/255,
-            alpha: 1
-        )
-        rect.layer.cornerRadius = 10
-        rect.frame = CGRect(
-            x: view.frame.midX - 54.5,
-            y: settingsButton.frame.maxY + 32,
-            width: 109,
-            height: 79
-        )
-        return rect
-    }()
-    
-    lazy var rectangleRightView = {
-        let rect = UIView()
-        rect.backgroundColor = UIColor(
-            red: 242/255,
-            green: 242/255,
-            blue: 242/255,
-            alpha: 1
-        )
-        rect.layer.cornerRadius = 10
-        rect.frame = CGRect(
-            x: view.frame.maxX - 139,
-            y: settingsButton.frame.maxY + 32,
-            width: 109,
-            height: 79
-        )
-        return rect
-    }()
-    
-    // MARK: - Number Labels in Views
-    lazy var countFriendsLabel = {
-        let label = UILabel()
-        label.text = String(countFriends)
-        label.font = .boldSystemFont(ofSize: 20)
-        label.sizeToFit()
-        label.frame.origin = CGPoint(
-            x: rectangleLeftView.frame.minX + 15,
-            y: rectangleLeftView.frame.minY + 18
-        )
-        return label
-    }()
-    
-    lazy var countSubscribesLabel = {
-       let label = UILabel()
-        label.text = String(countSubscribes)
-        label.font = .boldSystemFont(ofSize: 20)
-        label.sizeToFit()
-        label.frame.origin = CGPoint(
-            x: rectangleCenterView.frame.minX + 15,
-            y: rectangleCenterView.frame.minY + 18
-        )
-        return label
-    }()
-    
-    lazy var countFavouritesLabel = {
-       let label = UILabel()
-        label.text = String(countFavourites)
-        label.font = .boldSystemFont(ofSize: 20)
-        label.sizeToFit()
-        label.frame.origin = CGPoint(
-            x: rectangleRightView.frame.minX + 15,
-            y: rectangleRightView.frame.minY + 18
-        )
-        return label
-    }()
-    
-    // MARK: - Text labels in Views
-    lazy var textFriendsLabel = {
-        let label = UILabel()
-        label.text = "Друзей"
-        label.font = .systemFont(ofSize: 16)
-        label.sizeToFit()
-        label.frame.origin = CGPoint(
-            x: rectangleLeftView.frame.minX + 15,
-            y: countFriendsLabel.frame.maxY
-        )
-        return label
-    }()
-    
-    lazy var textSubscribesLabel = {
-        let label = UILabel()
-        label.text = "Подписок"
-        label.font = .systemFont(ofSize: 16)
-        label.sizeToFit()
-        label.frame.origin = CGPoint(
-            x: rectangleCenterView.frame.minX + 15,
-            y: countSubscribesLabel.frame.maxY
-        )
-        return label
-    }()
-    
-    lazy var textFavouritesLabel = {
-        let label = UILabel()
-        label.text = "Избранных"
-        label.font = .systemFont(ofSize: 16)
-        label.sizeToFit()
-        label.frame.origin = CGPoint(
-            x: rectangleRightView.frame.minX + 15,
-            y: countFavouritesLabel.frame.maxY
-        )
-        return label
-    }()
-    
-    // MARK: - ImageView
+
     lazy var imageView = {
         let image = UIImageView()
         image.image = UIImage(named: "iAmIronman")
         image.frame = CGRect(
             x: view.frame.minX + 31,
-            y: rectangleCenterView.frame.maxY + 42,
-            width: rectangleRightView.frame.maxX - 30,
-            height: 250
+            y: avatar.frame.maxY + 218,
+            width: 369,
+            height: 300
         )
         image.layer.cornerRadius = 20
         image.clipsToBounds = true
@@ -212,22 +74,73 @@ final class ViewController: UIViewController, ViewControllerDelegate {
         title = "Профиль"
         navigationController?.navigationBar.prefersLargeTitles = true
         
+        addSubview()
+    }
+}
+
+// MARK: - Extensions
+extension ViewController: ViewControllerDelegate {
+    func setLabelText(firstName: String, secondName: String) {
+        self.nameLabel.text = firstName + " " + secondName
+    }
+}
+
+extension ViewController {
+    private func setViews(offsetX: CGFloat) -> UIView {
+        let view = UIView()
+        view.backgroundColor = UIColor(
+            red: 242/255,
+            green: 242/255,
+            blue: 242/255,
+            alpha: 1
+        )
+        view.layer.cornerRadius = 10
+        view.frame = CGRect(
+            x: view.frame.minX + offsetX,
+            y: settingsButton.frame.maxY + 32,
+            width: 109,
+            height: 79
+        )
+        return view
+    }
+    
+    private func setCountLabels(count: Int, offsetX: CGFloat) -> UILabel {
+        let label = UILabel()
+        label.text = String(count)
+        label.font = .boldSystemFont(ofSize: 20)
+        label.sizeToFit()
+        label.frame.origin = CGPoint(
+            x: view.frame.minX + offsetX,
+            y: avatar.frame.maxY + 115
+        )
+        return label
+    }
+    
+    private func setTextLabels(text: String, offsetX: CGFloat) -> UILabel {
+        let label = UILabel()
+        label.text = text
+        label.font = .systemFont(ofSize: 16)
+        label.sizeToFit()
+        label.frame.origin = CGPoint(
+            x: view.frame.minX + offsetX,
+            y: avatar.frame.maxY + 136
+        )
+        return label
+    }
+    
+    private func addSubview() {
         view.addSubview(avatar)
         view.addSubview(nameLabel)
         view.addSubview(settingsButton)
-        view.addSubview(rectangleLeftView)
-        view.addSubview(rectangleCenterView)
-        view.addSubview(rectangleRightView)
-        view.addSubview(countFriendsLabel)
-        view.addSubview(countSubscribesLabel)
-        view.addSubview(countFavouritesLabel)
-        view.addSubview(textFriendsLabel)
-        view.addSubview(textSubscribesLabel)
-        view.addSubview(textFavouritesLabel)
         view.addSubview(imageView)
-    }
-    
-    func setLabelText(firstName: String, secondName: String) {
-        self.nameLabel.text = firstName + " " + secondName
+        view.addSubview(setViews(offsetX: 30))
+        view.addSubview(setViews(offsetX: 160))
+        view.addSubview(setViews(offsetX: 291))
+        view.addSubview(setCountLabels(count: 10, offsetX: 45))
+        view.addSubview(setCountLabels(count: 20, offsetX: 180))
+        view.addSubview(setCountLabels(count: 30, offsetX: 306))
+        view.addSubview(setTextLabels(text: "Друзей", offsetX: 45))
+        view.addSubview(setTextLabels(text: "Подписок", offsetX: 180))
+        view.addSubview(setTextLabels(text: "Избранных", offsetX: 306))
     }
 }
