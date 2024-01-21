@@ -48,9 +48,11 @@ final class ProfileViewController: UIViewController {
     
     lazy var vStackFriendsLabels = {
         $0.axis = .vertical
-        $0.distribution = .fillProportionally
+        $0.distribution = .fillEqually
+        $0.addArrangedSubview(UIView())
         $0.addArrangedSubview(setCountLabels(count: 10))
         $0.addArrangedSubview(setTextLabels(text: "Друзей"))
+        $0.addArrangedSubview(UIView())
         return $0
     }(
         UIStackView(
@@ -65,9 +67,11 @@ final class ProfileViewController: UIViewController {
     
     lazy var vStackSubscribesLabels = {
         $0.axis = .vertical
-        $0.distribution = .fillProportionally
+        $0.distribution = .fillEqually
+        $0.addArrangedSubview(UIView())
         $0.addArrangedSubview(setCountLabels(count: 20))
         $0.addArrangedSubview(setTextLabels(text: "Подписок"))
+        $0.addArrangedSubview(UIView())
         return $0
     }(
         UIStackView(
@@ -82,9 +86,11 @@ final class ProfileViewController: UIViewController {
     
     lazy var vStackFavouritesLabels = {
         $0.axis = .vertical
-        $0.distribution = .fillProportionally
+        $0.distribution = .fillEqually
+        $0.addArrangedSubview(UIView())
         $0.addArrangedSubview(setCountLabels(count: 30))
         $0.addArrangedSubview(setTextLabels(text: "Избранных"))
+        $0.addArrangedSubview(UIView())
         return $0
     }(
         UIStackView(

@@ -43,21 +43,12 @@ final class SettingsViewController: UIViewController {
         $0.addArrangedSubview(firstNameTextField)
         $0.addArrangedSubview(secondNameTextField)
         return $0
-    }(
-        UIStackView(
-            frame: CGRect(
-                x: customView.frame.minX + 15,
-                y: customView.frame.minY + 32,
-                width: customView.frame.width - 30,
-                height: customView.frame.size.height - 140
-            )
-        )
-    )
+    }(UIStackView())
     
     lazy var vMainStack = {
         $0.axis = .vertical
-        $0.distribution = .fillProportionally
         $0.spacing = 28
+        $0.distribution = .fillProportionally
         $0.addArrangedSubview(vStack)
         $0.addArrangedSubview(saveButton)
         return $0
@@ -93,12 +84,6 @@ final class SettingsViewController: UIViewController {
         $0.backgroundColor = .black
         $0.setTitleColor(.white, for: .normal)
         $0.layer.cornerRadius = 30
-        $0.frame = CGRect(
-            x: customView.frame.minX + 15,
-            y: customView.frame.maxY - 85,
-            width: customView.frame.width - 30,
-            height: 54
-        )
         return $0
     }(UIButton(primaryAction: saveAction))
     
