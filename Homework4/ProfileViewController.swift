@@ -9,8 +9,7 @@ final class ProfileViewController: UIViewController {
     lazy var vStack = {
         $0.axis = .vertical
         $0.alignment = .center
-        $0.spacing = 11
-        $0.distribution = .fillProportionally
+        $0.distribution = .equalSpacing
         $0.addArrangedSubview(avatar)
         $0.addArrangedSubview(nameLabel)
         $0.addArrangedSubview(settingsButton)
@@ -19,9 +18,9 @@ final class ProfileViewController: UIViewController {
         UIStackView(
             frame: CGRect(
                 x: view.frame.minX,
-                y: view.frame.height - view.frame.height + 200,
+                y: view.frame.minY + 150,
                 width: view.frame.width,
-                height: view.frame.height - 625 - 142
+                height: view.frame.height / 2 - 275
             )
         )
     )
@@ -39,7 +38,7 @@ final class ProfileViewController: UIViewController {
         UIStackView(
             frame: CGRect(
                 x: view.frame.minX + 30,
-                y: vStack.frame.maxY + 32,
+                y: vStack.frame.maxY + 25,
                 width: view.frame.width - 60,
                 height: 79
             )
@@ -54,16 +53,7 @@ final class ProfileViewController: UIViewController {
         $0.addArrangedSubview(setTextLabels(text: "Друзей"))
         $0.addArrangedSubview(UIView())
         return $0
-    }(
-        UIStackView(
-            frame: CGRect(
-                x: view.frame.minX + 45,
-                y: hStackCustomViews.frame.minY,
-                width: 94,
-                height: hStackCustomViews.bounds.maxY
-            )
-        )
-    )
+    }(setFrameVStackLabels(x: 40))
     
     lazy var vStackSubscribesLabels = {
         $0.axis = .vertical
@@ -73,16 +63,7 @@ final class ProfileViewController: UIViewController {
         $0.addArrangedSubview(setTextLabels(text: "Подписок"))
         $0.addArrangedSubview(UIView())
         return $0
-    }(
-        UIStackView(
-            frame: CGRect(
-                x: view.frame.minX + 180,
-                y: hStackCustomViews.frame.minY,
-                width: 94,
-                height: hStackCustomViews.bounds.maxY
-            )
-        )
-    )
+    }(setFrameVStackLabels(x: 160))
     
     lazy var vStackFavouritesLabels = {
         $0.axis = .vertical
@@ -92,16 +73,7 @@ final class ProfileViewController: UIViewController {
         $0.addArrangedSubview(setTextLabels(text: "Избранных"))
         $0.addArrangedSubview(UIView())
         return $0
-    }(
-        UIStackView(
-            frame: CGRect(
-                x: view.frame.minX + 306,
-                y: hStackCustomViews.frame.minY,
-                width: 94,
-                height: hStackCustomViews.bounds.maxY
-            )
-        )
-    )
+    }(setFrameVStackLabels(x: 275))
     
     lazy var avatar = {
         $0.image = UIImage(named: "avatar")
@@ -132,8 +104,8 @@ final class ProfileViewController: UIViewController {
         $0.image = UIImage(named: "iAmIronman")
         $0.frame = CGRect(
             x: view.frame.minX + 31,
-            y: hStackCustomViews.frame.maxY + 42,
-            width: 369,
+            y: hStackCustomViews.frame.maxY + 25,
+            width: hStackCustomViews.bounds.maxX,
             height: 300
         )
         $0.layer.cornerRadius = 20
@@ -195,7 +167,7 @@ extension ProfileViewController {
     private func setCountLabels(count: Int) -> UILabel {
         let label = UILabel()
         label.text = String(count)
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .boldSystemFont(ofSize: 18)
         label.sizeToFit()
         return label
     }
@@ -203,9 +175,21 @@ extension ProfileViewController {
     private func setTextLabels(text: String) -> UILabel {
         let label = UILabel()
         label.text = text
-        label.font = .systemFont(ofSize: 16)
+        label.font = .systemFont(ofSize: 14)
         label.sizeToFit()
         return label
+    }
+    
+    private func setFrameVStackLabels(x: CGFloat) -> UIStackView {
+        let stack = UIStackView(
+            frame: CGRect(
+                x: view.frame.minX + x,
+                y: hStackCustomViews.frame.minY,
+                width: 80,
+                height: hStackCustomViews.bounds.maxY
+            )
+        )
+        return stack
     }
     
     private func addSubview() {
