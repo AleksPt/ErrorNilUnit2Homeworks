@@ -6,7 +6,7 @@ protocol ViewControllerDelegate {
 
 final class ProfileViewController: UIViewController {
     
-    lazy var vStack = {
+    lazy var vStack: UIStackView = {
         $0.axis = .vertical
         $0.alignment = .center
         $0.distribution = .equalSpacing
@@ -25,7 +25,7 @@ final class ProfileViewController: UIViewController {
         )
     )
     
-    lazy var hStackCustomViews = {
+    lazy var hStackCustomViews: UIStackView = {
         $0.axis = .horizontal
         $0.alignment = .fill
         $0.spacing = 22
@@ -45,7 +45,7 @@ final class ProfileViewController: UIViewController {
         )
     )
     
-    lazy var vStackFriendsLabels = {
+    lazy var vStackFriendsLabels: UIStackView = {
         $0.axis = .vertical
         $0.distribution = .fillEqually
         $0.addArrangedSubview(UIView())
@@ -55,7 +55,7 @@ final class ProfileViewController: UIViewController {
         return $0
     }(setFrameVStackLabels(x: 40))
     
-    lazy var vStackSubscribesLabels = {
+    lazy var vStackSubscribesLabels: UIStackView = {
         $0.axis = .vertical
         $0.distribution = .fillEqually
         $0.addArrangedSubview(UIView())
@@ -65,7 +65,7 @@ final class ProfileViewController: UIViewController {
         return $0
     }(setFrameVStackLabels(x: 160))
     
-    lazy var vStackFavouritesLabels = {
+    lazy var vStackFavouritesLabels: UIStackView = {
         $0.axis = .vertical
         $0.distribution = .fillEqually
         $0.addArrangedSubview(UIView())
@@ -75,19 +75,19 @@ final class ProfileViewController: UIViewController {
         return $0
     }(setFrameVStackLabels(x: 275))
     
-    lazy var avatar = {
+    lazy var avatar: UIImageView = {
         $0.image = UIImage(named: "avatar")
         return $0
     }(UIImageView())
     
-    lazy var nameLabel = {
+    lazy var nameLabel: UILabel = {
         $0.text = "Iron Man"
         $0.font = .boldSystemFont(ofSize: 20)
         $0.textAlignment = .center
         return $0
     }(UILabel())
     
-    lazy var settingsButton = {
+    lazy var settingsButton: UIButton = {
         $0.setTitleColor(.systemBlue, for: .normal)
         $0.setTitle("Настройки", for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 16)
@@ -100,7 +100,7 @@ final class ProfileViewController: UIViewController {
         self.navigationController?.pushViewController(settingsViewController, animated: true)
     }
     
-    lazy var imageView = {
+    lazy var imageView: UIImageView = {
         $0.image = UIImage(named: "iAmIronman")
         $0.frame = CGRect(
             x: view.frame.minX + 31,
@@ -114,7 +114,7 @@ final class ProfileViewController: UIViewController {
         return $0
     }(UIImageView())
     
-    lazy var moreInfoButton = {
+    lazy var moreInfoButton: UIButton = {
         $0.setTitle("More info", for: .normal)
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = .boldSystemFont(ofSize: 20)
