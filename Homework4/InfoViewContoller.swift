@@ -64,4 +64,15 @@ extension InfoViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Друзья"
+        case 1:
+            return "Злодеи"
+        default:
+            return ""
+        }
+    }
 }
