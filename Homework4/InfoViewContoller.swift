@@ -19,6 +19,7 @@ final class InfoViewController: UIViewController {
     lazy var tableView = {
         $0.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         $0.dataSource = self
+        $0.delegate = self
         return $0
     }(
         UITableView(
@@ -38,7 +39,7 @@ final class InfoViewController: UIViewController {
     
 }
 
-extension InfoViewController: UITableViewDataSource {
+extension InfoViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         2
@@ -74,5 +75,9 @@ extension InfoViewController: UITableViewDataSource {
         default:
             return ""
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
