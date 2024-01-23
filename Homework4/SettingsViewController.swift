@@ -11,10 +11,7 @@ final class SettingsViewController: UIViewController {
         $0.text = "Введите новые данные"
         $0.sizeToFit()
         $0.font = .systemFont(ofSize: 16)
-        $0.frame.origin = CGPoint(
-            x: view.frame.minX + 31,
-            y: view.frame.minY + 186
-        )
+        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UILabel())
     
@@ -27,12 +24,7 @@ final class SettingsViewController: UIViewController {
             blue: 242/255,
             alpha: 1
         )
-        $0.frame = CGRect(
-            x: view.frame.minX + 31,
-            y: descriptionLabel.frame.maxY + 36,
-            width: view.frame.maxX - 60,
-            height: 264
-        )
+        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIView())
     
@@ -42,27 +34,10 @@ final class SettingsViewController: UIViewController {
         $0.distribution = .fillEqually
         $0.addArrangedSubview(firstNameTextField)
         $0.addArrangedSubview(secondNameTextField)
+        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIStackView())
-    
-    lazy var vMainStack = {
-        $0.axis = .vertical
-        $0.spacing = 28
-        $0.distribution = .fillProportionally
-        $0.addArrangedSubview(vStack)
-        $0.addArrangedSubview(saveButton)
-        return $0
-    }(
-        UIStackView(
-            frame: CGRect(
-                x: customView.frame.minX + 15,
-                y: customView.frame.minY + 32,
-                width: customView.frame.width - 30,
-                height: customView.frame.height - 63
-            )
-        )
-    )
-    
+        
     lazy var firstNameTextField = {
         $0.backgroundColor = .white
         $0.placeholder = "Имя"
@@ -84,6 +59,7 @@ final class SettingsViewController: UIViewController {
         $0.backgroundColor = .black
         $0.setTitleColor(.white, for: .normal)
         $0.layer.cornerRadius = 30
+        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIButton(primaryAction: saveAction))
     
@@ -109,9 +85,12 @@ final class SettingsViewController: UIViewController {
         title = "Настройки"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        view.addSubview(customView)
         view.addSubview(descriptionLabel)
-        view.addSubview(vMainStack)
+        view.addSubview(customView)
+        view.addSubview(vStack)
+        view.addSubview(saveButton)
+        
+        setConstraints()
     }
     
     private func checkNumberInTextField() {
@@ -166,6 +145,28 @@ extension SettingsViewController {
         
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    private func setConstraints() {
+        NSLayoutConstraint.activate([
+            descriptionLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 186),
+            descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 31),
+            
+            customView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 36),
+            customView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 31),
+            customView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -31),
+            customView.heightAnchor.constraint(equalToConstant: 264),
+            
+            vStack.topAnchor.constraint(equalTo: customView.topAnchor, constant: 32),
+            vStack.leadingAnchor.constraint(equalTo: customView.leadingAnchor, constant: 15),
+            vStack.trailingAnchor.constraint(equalTo: customView.trailingAnchor, constant: -15),
+            vStack.bottomAnchor.constraint(equalTo: customView.bottomAnchor, constant: -113),
+            
+            saveButton.topAnchor.constraint(equalTo: vStack.bottomAnchor, constant: 28),
+            saveButton.leadingAnchor.constraint(equalTo: customView.leadingAnchor, constant: 15),
+            saveButton.trailingAnchor.constraint(equalTo: customView.trailingAnchor, constant: -15),
+            saveButton.heightAnchor.constraint(equalToConstant: 54)
+        ])
     }
 }
 

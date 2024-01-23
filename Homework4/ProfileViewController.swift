@@ -6,77 +6,9 @@ protocol ViewControllerDelegate {
 
 final class ProfileViewController: UIViewController {
     
-    lazy var vStack: UIStackView = {
-        $0.axis = .vertical
-        $0.alignment = .center
-        $0.distribution = .equalSpacing
-        $0.addArrangedSubview(avatar)
-        $0.addArrangedSubview(nameLabel)
-        $0.addArrangedSubview(settingsButton)
-        return $0
-    }(
-        UIStackView(
-            frame: CGRect(
-                x: view.frame.minX,
-                y: view.frame.minY + 150,
-                width: view.frame.width,
-                height: view.frame.height / 2 - 275
-            )
-        )
-    )
-    
-    lazy var hStackCustomViews: UIStackView = {
-        $0.axis = .horizontal
-        $0.alignment = .fill
-        $0.spacing = 22
-        $0.distribution = .fillProportionally
-        $0.addArrangedSubview(setViews())
-        $0.addArrangedSubview(setViews())
-        $0.addArrangedSubview(setViews())
-        return $0
-    }(
-        UIStackView(
-            frame: CGRect(
-                x: view.frame.minX + 30,
-                y: vStack.frame.maxY + 25,
-                width: view.frame.width - 60,
-                height: 79
-            )
-        )
-    )
-    
-    lazy var vStackFriendsLabels: UIStackView = {
-        $0.axis = .vertical
-        $0.distribution = .fillEqually
-        $0.addArrangedSubview(UIView())
-        $0.addArrangedSubview(setCountLabels(count: 10))
-        $0.addArrangedSubview(setTextLabels(text: "Друзей"))
-        $0.addArrangedSubview(UIView())
-        return $0
-    }(setFrameVStackLabels(x: 40))
-    
-    lazy var vStackSubscribesLabels: UIStackView = {
-        $0.axis = .vertical
-        $0.distribution = .fillEqually
-        $0.addArrangedSubview(UIView())
-        $0.addArrangedSubview(setCountLabels(count: 20))
-        $0.addArrangedSubview(setTextLabels(text: "Подписок"))
-        $0.addArrangedSubview(UIView())
-        return $0
-    }(setFrameVStackLabels(x: 160))
-    
-    lazy var vStackFavouritesLabels: UIStackView = {
-        $0.axis = .vertical
-        $0.distribution = .fillEqually
-        $0.addArrangedSubview(UIView())
-        $0.addArrangedSubview(setCountLabels(count: 30))
-        $0.addArrangedSubview(setTextLabels(text: "Избранных"))
-        $0.addArrangedSubview(UIView())
-        return $0
-    }(setFrameVStackLabels(x: 275))
-    
     lazy var avatar: UIImageView = {
         $0.image = UIImage(named: "avatar")
+        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIImageView())
     
@@ -84,6 +16,7 @@ final class ProfileViewController: UIViewController {
         $0.text = "Iron Man"
         $0.font = .boldSystemFont(ofSize: 20)
         $0.textAlignment = .center
+        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UILabel())
     
@@ -91,6 +24,7 @@ final class ProfileViewController: UIViewController {
         $0.setTitleColor(.systemBlue, for: .normal)
         $0.setTitle("Настройки", for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 16)
+        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIButton(primaryAction: settingsButtonAction))
     
@@ -100,17 +34,51 @@ final class ProfileViewController: UIViewController {
         self.navigationController?.pushViewController(settingsViewController, animated: true)
     }
     
+    lazy var leftView: UIView = {
+       setViews()
+    }()
+    
+    lazy var centerView: UIView = {
+       setViews()
+    }()
+    
+    lazy var rightView: UIView = {
+       setViews()
+    }()
+    
+    lazy var vStackFriendsLabels: UIStackView = {
+        $0.axis = .vertical
+        $0.distribution = .fillEqually
+        $0.addArrangedSubview(setCountLabels(count: 10))
+        $0.addArrangedSubview(setTextLabels(text: "Друзей"))
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        return $0
+    }(UIStackView())
+    
+    lazy var vStackSubscribesLabels: UIStackView = {
+        $0.axis = .vertical
+        $0.distribution = .fillEqually
+        $0.addArrangedSubview(setCountLabels(count: 20))
+        $0.addArrangedSubview(setTextLabels(text: "Подписок"))
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        return $0
+    }(UIStackView())
+    
+    lazy var vStackFavouritesLabels: UIStackView = {
+        $0.axis = .vertical
+        $0.distribution = .fillEqually
+        $0.addArrangedSubview(setCountLabels(count: 30))
+        $0.addArrangedSubview(setTextLabels(text: "Избранных"))
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        return $0
+    }(UIStackView())
+    
     lazy var imageView: UIImageView = {
         $0.image = UIImage(named: "iAmIronman")
-        $0.frame = CGRect(
-            x: view.frame.minX + 31,
-            y: hStackCustomViews.frame.maxY + 25,
-            width: hStackCustomViews.bounds.maxX,
-            height: 300
-        )
         $0.layer.cornerRadius = 20
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFill
+        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIImageView())
     
@@ -120,12 +88,7 @@ final class ProfileViewController: UIViewController {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 20)
         $0.backgroundColor = .red
         $0.layer.cornerRadius = 20
-        $0.frame = CGRect(
-        x: imageView.frame.minX,
-        y: imageView.frame.maxY + 25,
-        width: imageView.bounds.maxX,
-        height: 60
-        )
+        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIButton(primaryAction: moreInfoAction))
     
@@ -143,6 +106,7 @@ final class ProfileViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         addSubview()
+        setConstraints()
     }
 }
 
@@ -163,6 +127,7 @@ extension ProfileViewController {
             alpha: 1
         )
         view.layer.cornerRadius = 10
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }
     
@@ -182,25 +147,72 @@ extension ProfileViewController {
         return label
     }
     
-    private func setFrameVStackLabels(x: CGFloat) -> UIStackView {
-        let stack = UIStackView(
-            frame: CGRect(
-                x: view.frame.minX + x,
-                y: hStackCustomViews.frame.minY,
-                width: 80,
-                height: hStackCustomViews.bounds.maxY
-            )
-        )
-        return stack
+    private func setConstraints() {
+        NSLayoutConstraint.activate([
+
+            avatar.topAnchor.constraint(equalTo: view.topAnchor, constant: 142),
+            avatar.widthAnchor.constraint(equalToConstant: 100),
+            avatar.heightAnchor.constraint(equalToConstant: 100),
+            avatar.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            nameLabel.topAnchor.constraint(equalTo: avatar.bottomAnchor, constant: 14),
+            nameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            nameLabel.widthAnchor.constraint(equalToConstant: view.frame.width),
+            nameLabel.bottomAnchor.constraint(equalTo: avatar.bottomAnchor, constant: 38),
+            
+            settingsButton.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+            settingsButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            settingsButton.widthAnchor.constraint(equalToConstant: view.frame.width),
+            settingsButton.bottomAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 27),
+                        
+            leftView.topAnchor.constraint(equalTo: settingsButton.bottomAnchor, constant: 32),
+            leftView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            leftView.widthAnchor.constraint(equalToConstant: 109),
+            leftView.heightAnchor.constraint(equalToConstant: 79),
+            
+            centerView.topAnchor.constraint(equalTo: leftView.topAnchor),
+            centerView.widthAnchor.constraint(equalToConstant: 109),
+            centerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            centerView.heightAnchor.constraint(equalToConstant: 79),
+            
+            rightView.topAnchor.constraint(equalTo: settingsButton.bottomAnchor, constant: 32),
+            rightView.widthAnchor.constraint(equalToConstant: 109),
+            rightView.heightAnchor.constraint(equalToConstant: 79),
+            rightView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            
+            vStackFriendsLabels.centerYAnchor.constraint(equalTo: leftView.centerYAnchor),
+            vStackFriendsLabels.leadingAnchor.constraint(equalTo: leftView.leadingAnchor, constant: 15),
+            
+            vStackSubscribesLabels.centerYAnchor.constraint(equalTo: centerView.centerYAnchor),
+            vStackSubscribesLabels.leadingAnchor.constraint(equalTo: centerView.leadingAnchor, constant: 15),
+            
+            vStackFavouritesLabels.centerYAnchor.constraint(equalTo: rightView.centerYAnchor),
+            vStackFavouritesLabels.leadingAnchor.constraint(equalTo: rightView.leadingAnchor, constant: 15),
+            
+            imageView.topAnchor.constraint(equalTo: leftView.bottomAnchor, constant: 42),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -140),
+            imageView.leadingAnchor.constraint(equalTo: leftView.leadingAnchor, constant: 0),
+            imageView.trailingAnchor.constraint(equalTo: rightView.trailingAnchor, constant: 0),
+
+            moreInfoButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 30),
+            moreInfoButton.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: 0),
+            moreInfoButton.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 0),
+            moreInfoButton.heightAnchor.constraint(equalToConstant: 70)
+            
+        ])
     }
     
     private func addSubview() {
-        view.addSubview(imageView)
-        view.addSubview(vStack)
-        view.addSubview(hStackCustomViews)
+        view.addSubview(avatar)
+        view.addSubview(nameLabel)
+        view.addSubview(settingsButton)
+        view.addSubview(leftView)
+        view.addSubview(centerView)
+        view.addSubview(rightView)
         view.addSubview(vStackFriendsLabels)
         view.addSubview(vStackSubscribesLabels)
         view.addSubview(vStackFavouritesLabels)
+        view.addSubview(imageView)
         view.addSubview(moreInfoButton)
     }
 }
