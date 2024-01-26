@@ -32,6 +32,12 @@
 		FA589C3E2B610D2400EF51AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA589C3D2B610D2400EF51AA /* Assets.xcassets */; };
 		FA589C412B610D2400EF51AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA589C3F2B610D2400EF51AA /* LaunchScreen.storyboard */; };
 		FA589C472B610F2000EF51AA /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA589C462B610F2000EF51AA /* TableCell.swift */; };
+		FA6EE0AB2B63FCAA000BD794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EE0AA2B63FCAA000BD794 /* AppDelegate.swift */; };
+		FA6EE0AD2B63FCAA000BD794 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EE0AC2B63FCAA000BD794 /* SceneDelegate.swift */; };
+		FA6EE0AF2B63FCAA000BD794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EE0AE2B63FCAA000BD794 /* ViewController.swift */; };
+		FA6EE0B42B63FCAB000BD794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6EE0B32B63FCAB000BD794 /* Assets.xcassets */; };
+		FA6EE0B72B63FCAB000BD794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6EE0B52B63FCAB000BD794 /* LaunchScreen.storyboard */; };
+		FA6EE0BD2B63FD2B000BD794 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EE0BC2B63FD2B000BD794 /* TableCell.swift */; };
 		FA7725D42B51B62C00CFA339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7725D32B51B62C00CFA339 /* AppDelegate.swift */; };
 		FA7725D62B51B62C00CFA339 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7725D52B51B62C00CFA339 /* SceneDelegate.swift */; };
 		FA7725D82B51B62C00CFA339 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7725D72B51B62C00CFA339 /* ViewController.swift */; };
@@ -82,6 +88,14 @@
 		FA589C402B610D2400EF51AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA589C422B610D2400EF51AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA589C462B610F2000EF51AA /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		FA6EE0A82B63FCAA000BD794 /* Homework6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework6.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6EE0AA2B63FCAA000BD794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA6EE0AC2B63FCAA000BD794 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA6EE0AE2B63FCAA000BD794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA6EE0B32B63FCAB000BD794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA6EE0B62B63FCAB000BD794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA6EE0B82B63FCAB000BD794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6EE0BC2B63FD2B000BD794 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		FA7725D12B51B62C00CFA339 /* Homework2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7725D32B51B62C00CFA339 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA7725D52B51B62C00CFA339 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +139,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA589C2F2B610D2300EF51AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6EE0A52B63FCAA000BD794 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -187,6 +208,7 @@
 				FA0787C02B5D8E8F0014206B /* Homework4 */,
 				FAF2CBCF2B5FE5BF004055B7 /* Homework5 */,
 				FA589C332B610D2300EF51AA /* Homework5.1 */,
+				FA6EE0A92B63FCAA000BD794 /* Homework6 */,
 				FA48BC302B4D5FE10056F4B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -200,6 +222,7 @@
 				FA0787BF2B5D8E8F0014206B /* Homework4.app */,
 				FAF2CBCE2B5FE5BF004055B7 /* Homework5.app */,
 				FA589C322B610D2300EF51AA /* Homework5.1.app */,
+				FA6EE0A82B63FCAA000BD794 /* Homework6.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,6 +253,20 @@
 				FA589C422B610D2400EF51AA /* Info.plist */,
 			);
 			path = Homework5.1;
+			sourceTree = "<group>";
+		};
+		FA6EE0A92B63FCAA000BD794 /* Homework6 */ = {
+			isa = PBXGroup;
+			children = (
+				FA6EE0AA2B63FCAA000BD794 /* AppDelegate.swift */,
+				FA6EE0AC2B63FCAA000BD794 /* SceneDelegate.swift */,
+				FA6EE0AE2B63FCAA000BD794 /* ViewController.swift */,
+				FA6EE0BC2B63FD2B000BD794 /* TableCell.swift */,
+				FA6EE0B32B63FCAB000BD794 /* Assets.xcassets */,
+				FA6EE0B52B63FCAB000BD794 /* LaunchScreen.storyboard */,
+				FA6EE0B82B63FCAB000BD794 /* Info.plist */,
+			);
+			path = Homework6;
 			sourceTree = "<group>";
 		};
 		FA7725D22B51B62C00CFA339 /* Homework2 */ = {
@@ -332,6 +369,23 @@
 			productReference = FA589C322B610D2300EF51AA /* Homework5.1.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FA6EE0A72B63FCAA000BD794 /* Homework6 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA6EE0BB2B63FCAB000BD794 /* Build configuration list for PBXNativeTarget "Homework6" */;
+			buildPhases = (
+				FA6EE0A42B63FCAA000BD794 /* Sources */,
+				FA6EE0A52B63FCAA000BD794 /* Frameworks */,
+				FA6EE0A62B63FCAA000BD794 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Homework6;
+			productName = Homework6;
+			productReference = FA6EE0A82B63FCAA000BD794 /* Homework6.app */;
+			productType = "com.apple.product-type.application";
+		};
 		FA7725D02B51B62C00CFA339 /* Homework2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA7725E42B51B62E00CFA339 /* Build configuration list for PBXNativeTarget "Homework2" */;
@@ -388,6 +442,9 @@
 					FA589C312B610D2300EF51AA = {
 						CreatedOnToolsVersion = 15.1;
 					};
+					FA6EE0A72B63FCAA000BD794 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					FA7725D02B51B62C00CFA339 = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -415,6 +472,7 @@
 				FA0787BE2B5D8E8F0014206B /* Homework4 */,
 				FAF2CBCD2B5FE5BF004055B7 /* Homework5 */,
 				FA589C312B610D2300EF51AA /* Homework5.1 */,
+				FA6EE0A72B63FCAA000BD794 /* Homework6 */,
 			);
 		};
 /* End PBXProject section */
@@ -455,6 +513,15 @@
 			files = (
 				FA589C412B610D2400EF51AA /* LaunchScreen.storyboard in Resources */,
 				FA589C3E2B610D2400EF51AA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6EE0A62B63FCAA000BD794 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6EE0B72B63FCAB000BD794 /* LaunchScreen.storyboard in Resources */,
+				FA6EE0B42B63FCAB000BD794 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +588,17 @@
 				FA589C352B610D2300EF51AA /* AppDelegate.swift in Sources */,
 				FA589C472B610F2000EF51AA /* TableCell.swift in Sources */,
 				FA589C372B610D2300EF51AA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6EE0A42B63FCAA000BD794 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6EE0AF2B63FCAA000BD794 /* ViewController.swift in Sources */,
+				FA6EE0AB2B63FCAA000BD794 /* AppDelegate.swift in Sources */,
+				FA6EE0BD2B63FD2B000BD794 /* TableCell.swift in Sources */,
+				FA6EE0AD2B63FCAA000BD794 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +671,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA589C402B610D2400EF51AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FA6EE0B52B63FCAB000BD794 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA6EE0B62B63FCAB000BD794 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -983,6 +1069,60 @@
 			};
 			name = Release;
 		};
+		FA6EE0B92B63FCAB000BD794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L23B96GPNM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Homework6/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alexpetrenko.Homework6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA6EE0BA2B63FCAB000BD794 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L23B96GPNM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Homework6/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alexpetrenko.Homework6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FA7725E22B51B62E00CFA339 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1143,6 +1283,15 @@
 			buildConfigurations = (
 				FA589C432B610D2400EF51AA /* Debug */,
 				FA589C442B610D2400EF51AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA6EE0BB2B63FCAB000BD794 /* Build configuration list for PBXNativeTarget "Homework6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA6EE0B92B63FCAB000BD794 /* Debug */,
+				FA6EE0BA2B63FCAB000BD794 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
