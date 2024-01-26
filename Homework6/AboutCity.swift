@@ -1,16 +1,30 @@
 import UIKit
 
-protocol AboutCityDelegate {
-    func setInfoAboutCity(
-        image: UIImage,
-        title: String,
-        description: String
-    )
-}
-
 final class AboutCity: UIViewController {
     
     // MARK: - Public Properties
+    lazy var photo: UIImageView = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.layer.cornerRadius = 30
+        $0.clipsToBounds = true
+        $0.contentMode = .scaleAspectFill
+        return $0
+    }(UIImageView())
+    
+    lazy var titleLabel: UILabel = {
+        $0.font = .systemFont(ofSize: 20, weight: .heavy)
+        $0.numberOfLines = 0
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        return $0
+    }(UILabel())
+    
+    lazy var text: UILabel = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.numberOfLines = 0
+        return $0
+    }(UILabel())
+    
+    // MARK: - Private Properties
     private lazy var scrollView: UIScrollView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.contentInsetAdjustmentBehavior = .never
@@ -25,27 +39,6 @@ final class AboutCity: UIViewController {
         $0.addSubview(titleLabel)
         return $0
     }(UIView())
-    
-    private  lazy var photo: UIImageView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.layer.cornerRadius = 30
-        $0.clipsToBounds = true
-        $0.contentMode = .scaleAspectFill
-        return $0
-    }(UIImageView())
-    
-    private lazy var titleLabel: UILabel = {
-        $0.font = .systemFont(ofSize: 20, weight: .heavy)
-        $0.numberOfLines = 0
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        return $0
-    }(UILabel())
-    
-    private lazy var text: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.numberOfLines = 0
-        return $0
-    }(UILabel())
     
     // MARK: - Overrides Methods
     override func viewDidLoad() {
@@ -85,14 +78,5 @@ final class AboutCity: UIViewController {
             
             scrollViewContent.bottomAnchor.constraint(equalTo: text.bottomAnchor, constant: 50),
         ])
-    }
-}
-
-// MARK: - Extensions
-extension AboutCity: AboutCityDelegate {
-    func setInfoAboutCity(image: UIImage, title: String, description: String) {
-        self.photo.image = image
-        self.titleLabel.text = title
-        self.text.text = description
     }
 }

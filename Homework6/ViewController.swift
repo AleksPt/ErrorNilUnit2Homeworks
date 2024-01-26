@@ -9,9 +9,6 @@ struct CityGuide {
 
 final class ViewController: UIViewController {
     
-    // MARK: - Public Properties
-    var delegate: AboutCityDelegate?
-    
     // MARK: - Private Properties
     private let tableData = [
         CityGuide(
@@ -51,6 +48,8 @@ final class ViewController: UIViewController {
             titleLabel: "Ванкувер",
             descriptionLabel: "Город на западном побережье Канады, крупнейший населённый пункт провинции Британская Колумбия и третий по величине в Канаде. В 2010 году в Ванкувере проводились XXI зимние Олимпийские игры.",
             fullOverview: """
+            По своему статусу Ванкувер – провинциальный город, но его выразительный архитектурный облик, развитая инфраструктура и разветвленная транспортная сеть не уступают любой столице мира. Это один из самых густонаселенных мегаполисов Канады и один из крупнейших портовых городов Северной Америки. Среди прочих инженерных чудес, здесь построен первый в стране беспилотный метрополитен, возведена одна из самых длинных в мире приморских набережных длиной 28 км.
+            
             Лучшее место для обзора впечатляющей панорамы Ванкувера – круглая смотровая площадка Vancouver Lookout, венчающая небоскреб Harbor Center на высоте 168 метров. К этому сооружению, напоминающему летающую тарелку пришельцев из космоса, ведет лифт с прозрачным корпусом. В нижнем ярусе площадки действует ресторан Top of Vancouver. Столики установлены на медленно вращающейся платформе, совершающей полный оборот на 360° за 55 минут. Во время обеда посетители имеют возможность не спеша рассмотреть весь город. Отсюда видны окружающие Ванкувер горы, острова в океане.
             """
         )
@@ -90,13 +89,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = AboutCity()
-        
-        delegate?.setInfoAboutCity(
-            image: tableData[indexPath.row].photoImage,
-            title: tableData[indexPath.row].titleLabel,
-            description: tableData[indexPath.row].descriptionLabel
-        )
-        
+        vc.photo.image = tableData[indexPath.row].photoImage
+        vc.text.text = tableData[indexPath.row].fullOverview
+        vc.titleLabel.text = tableData[indexPath.row].titleLabel
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
