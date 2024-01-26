@@ -91,7 +91,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = AboutCity()
         
-        self.delegate?.setInfoAboutCity(
+        delegate?.setInfoAboutCity(
             image: tableData[indexPath.row].photoImage,
             title: tableData[indexPath.row].titleLabel,
             description: tableData[indexPath.row].descriptionLabel
