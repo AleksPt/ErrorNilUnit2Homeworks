@@ -67,4 +67,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ScrollView()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

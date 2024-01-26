@@ -4,6 +4,7 @@ class ScrollView: UIViewController {
 
     lazy var scrollView: UIScrollView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.contentInsetAdjustmentBehavior = .never
         $0.addSubview(scrollViewContent)
         return $0
     }(UIScrollView())
@@ -61,7 +62,7 @@ class ScrollView: UIViewController {
             scrollViewContent.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             scrollViewContent.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             
-            photo.topAnchor.constraint(equalTo: scrollViewContent.topAnchor, constant: 50),
+            photo.topAnchor.constraint(equalTo: scrollViewContent.topAnchor, constant: 125),
             photo.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 24),
             photo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
             photo.heightAnchor.constraint(equalTo: photo.widthAnchor),
