@@ -26,7 +26,7 @@ final class TableCell: UITableViewCell {
     }(UIImageView())
     
     private lazy var titleLabel: UILabel = {
-        $0.font = .boldSystemFont(ofSize: 20)
+        $0.font = .systemFont(ofSize: 20, weight: .heavy)
         $0.numberOfLines = 0
         $0.sizeToFit()
         $0.translatesAutoresizingMaskIntoConstraints = false
