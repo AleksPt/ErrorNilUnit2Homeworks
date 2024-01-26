@@ -1,15 +1,24 @@
 import UIKit
 
-class ScrollView: UIViewController {
+protocol AboutCityDelegate {
+    func setInfoAboutCity(
+        image: UIImage,
+        title: String,
+        description: String
+    )
+}
 
-    lazy var scrollView: UIScrollView = {
+final class AboutCity: UIViewController {
+    
+    // MARK: - Public Properties
+    private lazy var scrollView: UIScrollView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.contentInsetAdjustmentBehavior = .never
         $0.addSubview(scrollViewContent)
         return $0
     }(UIScrollView())
     
-    lazy var scrollViewContent: UIView = {
+    private lazy var scrollViewContent: UIView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.addSubview(photo)
         $0.addSubview(text)
@@ -17,30 +26,28 @@ class ScrollView: UIViewController {
         return $0
     }(UIView())
     
-    lazy var photo: UIImageView = {
+    private  lazy var photo: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.image = .havana
         $0.layer.cornerRadius = 30
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFill
         return $0
     }(UIImageView())
     
-    lazy var titleLabel: UILabel = {
-        $0.text = "LALALA"
+    private lazy var titleLabel: UILabel = {
         $0.font = .systemFont(ofSize: 20, weight: .heavy)
         $0.numberOfLines = 0
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UILabel())
     
-    lazy var text: UILabel = {
+    private lazy var text: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.numberOfLines = 0
-        $0.text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit in voluptate velit esse Duis aute irure dolor in reprehenderit in voluptate velit esse Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit in voluptate velit esse Duis aute irure dolor in reprehenderit in voluptate velit esse Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit in voluptate velit esse Duis aute irure dolor in reprehenderit in voluptate velit esse Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit in voluptate velit esse Duis aute irure dolor in reprehenderit in voluptate velit esse Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit in voluptate velit esse Duis aute irure dolor in reprehenderit in voluptate velit esse Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit in voluptate velit esse Duis aute irure dolor in reprehenderit in voluptate velit esse"
         return $0
     }(UILabel())
     
+    // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -48,6 +55,7 @@ class ScrollView: UIViewController {
         setConstraints()
     }
     
+    // MARK: - Private Methods
     private func setConstraints() {
         NSLayoutConstraint.activate([
 
@@ -77,5 +85,14 @@ class ScrollView: UIViewController {
             
             scrollViewContent.bottomAnchor.constraint(equalTo: text.bottomAnchor, constant: 50),
         ])
+    }
+}
+
+// MARK: - Extensions
+extension AboutCity: AboutCityDelegate {
+    func setInfoAboutCity(image: UIImage, title: String, description: String) {
+        self.photo.image = image
+        self.titleLabel.text = title
+        self.text.text = description
     }
 }
