@@ -89,9 +89,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = AboutCity()
-        vc.photo.image = tableData[indexPath.row].photoImage
-        vc.text.text = tableData[indexPath.row].fullOverview
-        vc.titleLabel.text = tableData[indexPath.row].titleLabel
+        
+        vc.cityInfo = CityGuide(
+            photoImage: tableData[indexPath.row].photoImage,
+            titleLabel: tableData[indexPath.row].titleLabel,
+            descriptionLabel: tableData[indexPath.row].descriptionLabel,
+            fullOverview: tableData[indexPath.row].fullOverview
+        )
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
