@@ -52,6 +52,7 @@
 		FAAF15AD2B698F7F00C06E74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF15AB2B698F7F00C06E74 /* Main.storyboard */; };
 		FAAF15AF2B698F8100C06E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAF15AE2B698F8100C06E74 /* Assets.xcassets */; };
 		FAAF15B22B698F8100C06E74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF15B02B698F8100C06E74 /* LaunchScreen.storyboard */; };
+		FAAF15B82B6990F200C06E74 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15B72B6990F200C06E74 /* OnboardingModel.swift */; };
 		FAF2CBD12B5FE5BF004055B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CBD02B5FE5BF004055B7 /* AppDelegate.swift */; };
 		FAF2CBD32B5FE5BF004055B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CBD22B5FE5BF004055B7 /* SceneDelegate.swift */; };
 		FAF2CBD52B5FE5BF004055B7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CBD42B5FE5BF004055B7 /* ProfileViewController.swift */; };
@@ -121,6 +122,7 @@
 		FAAF15AE2B698F8100C06E74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAAF15B12B698F8100C06E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAAF15B32B698F8100C06E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAF15B72B6990F200C06E74 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		FAF2CBCE2B5FE5BF004055B7 /* Homework5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF2CBD02B5FE5BF004055B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF2CBD22B5FE5BF004055B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				FAAF15A52B698F7F00C06E74 /* AppDelegate.swift */,
 				FAAF15A72B698F7F00C06E74 /* SceneDelegate.swift */,
 				FAAF15A92B698F7F00C06E74 /* ViewController.swift */,
+				FAAF15B72B6990F200C06E74 /* OnboardingModel.swift */,
 				FAAF15AB2B698F7F00C06E74 /* Main.storyboard */,
 				FAAF15AE2B698F8100C06E74 /* Assets.xcassets */,
 				FAAF15B02B698F8100C06E74 /* LaunchScreen.storyboard */,
@@ -688,6 +691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAF15B82B6990F200C06E74 /* OnboardingModel.swift in Sources */,
 				FAAF15AA2B698F7F00C06E74 /* ViewController.swift in Sources */,
 				FAAF15A62B698F7F00C06E74 /* AppDelegate.swift in Sources */,
 				FAAF15A82B698F7F00C06E74 /* SceneDelegate.swift in Sources */,
