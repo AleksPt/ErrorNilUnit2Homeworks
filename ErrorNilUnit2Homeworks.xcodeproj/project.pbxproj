@@ -46,6 +46,12 @@
 		FA7725DD2B51B62E00CFA339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7725DC2B51B62E00CFA339 /* Assets.xcassets */; };
 		FA7725E02B51B62E00CFA339 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7725DE2B51B62E00CFA339 /* LaunchScreen.storyboard */; };
 		FA81DAD02B5DA2F9004F133B /* InfoViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81DACF2B5DA2F9004F133B /* InfoViewContoller.swift */; };
+		FAAF15A62B698F7F00C06E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15A52B698F7F00C06E74 /* AppDelegate.swift */; };
+		FAAF15A82B698F7F00C06E74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15A72B698F7F00C06E74 /* SceneDelegate.swift */; };
+		FAAF15AA2B698F7F00C06E74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15A92B698F7F00C06E74 /* ViewController.swift */; };
+		FAAF15AD2B698F7F00C06E74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF15AB2B698F7F00C06E74 /* Main.storyboard */; };
+		FAAF15AF2B698F8100C06E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAF15AE2B698F8100C06E74 /* Assets.xcassets */; };
+		FAAF15B22B698F8100C06E74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF15B02B698F8100C06E74 /* LaunchScreen.storyboard */; };
 		FAF2CBD12B5FE5BF004055B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CBD02B5FE5BF004055B7 /* AppDelegate.swift */; };
 		FAF2CBD32B5FE5BF004055B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CBD22B5FE5BF004055B7 /* SceneDelegate.swift */; };
 		FAF2CBD52B5FE5BF004055B7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CBD42B5FE5BF004055B7 /* ProfileViewController.swift */; };
@@ -107,6 +113,14 @@
 		FA7725DF2B51B62E00CFA339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA7725E12B51B62E00CFA339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA81DACF2B5DA2F9004F133B /* InfoViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewContoller.swift; sourceTree = "<group>"; };
+		FAAF15A32B698F7F00C06E74 /* Fly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAF15A52B698F7F00C06E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAAF15A72B698F7F00C06E74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FAAF15A92B698F7F00C06E74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAAF15AC2B698F7F00C06E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAAF15AE2B698F8100C06E74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAAF15B12B698F8100C06E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAAF15B32B698F8100C06E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF2CBCE2B5FE5BF004055B7 /* Homework5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF2CBD02B5FE5BF004055B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF2CBD22B5FE5BF004055B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +169,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA7725CE2B51B62C00CFA339 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAF15A02B698F7F00C06E74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -211,6 +232,7 @@
 				FAF2CBCF2B5FE5BF004055B7 /* Homework5 */,
 				FA589C332B610D2300EF51AA /* Homework5.1 */,
 				FA6EE0A92B63FCAA000BD794 /* Homework6 */,
+				FAAF15A42B698F7F00C06E74 /* Fly */,
 				FA48BC302B4D5FE10056F4B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -225,6 +247,7 @@
 				FAF2CBCE2B5FE5BF004055B7 /* Homework5.app */,
 				FA589C322B610D2300EF51AA /* Homework5.1.app */,
 				FA6EE0A82B63FCAA000BD794 /* Homework6.app */,
+				FAAF15A32B698F7F00C06E74 /* Fly.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -284,6 +307,20 @@
 				FA7725E12B51B62E00CFA339 /* Info.plist */,
 			);
 			path = Homework2;
+			sourceTree = "<group>";
+		};
+		FAAF15A42B698F7F00C06E74 /* Fly */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF15A52B698F7F00C06E74 /* AppDelegate.swift */,
+				FAAF15A72B698F7F00C06E74 /* SceneDelegate.swift */,
+				FAAF15A92B698F7F00C06E74 /* ViewController.swift */,
+				FAAF15AB2B698F7F00C06E74 /* Main.storyboard */,
+				FAAF15AE2B698F8100C06E74 /* Assets.xcassets */,
+				FAAF15B02B698F8100C06E74 /* LaunchScreen.storyboard */,
+				FAAF15B32B698F8100C06E74 /* Info.plist */,
+			);
+			path = Fly;
 			sourceTree = "<group>";
 		};
 		FAF2CBCF2B5FE5BF004055B7 /* Homework5 */ = {
@@ -406,6 +443,23 @@
 			productReference = FA7725D12B51B62C00CFA339 /* Homework2.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FAAF15A22B698F7F00C06E74 /* Fly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAF15B62B698F8100C06E74 /* Build configuration list for PBXNativeTarget "Fly" */;
+			buildPhases = (
+				FAAF159F2B698F7F00C06E74 /* Sources */,
+				FAAF15A02B698F7F00C06E74 /* Frameworks */,
+				FAAF15A12B698F7F00C06E74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fly;
+			productName = Fly;
+			productReference = FAAF15A32B698F7F00C06E74 /* Fly.app */;
+			productType = "com.apple.product-type.application";
+		};
 		FAF2CBCD2B5FE5BF004055B7 /* Homework5 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAF2CBE12B5FE5C1004055B7 /* Build configuration list for PBXNativeTarget "Homework5" */;
@@ -451,6 +505,9 @@
 					FA7725D02B51B62C00CFA339 = {
 						CreatedOnToolsVersion = 15.1;
 					};
+					FAAF15A22B698F7F00C06E74 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					FAF2CBCD2B5FE5BF004055B7 = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -476,6 +533,7 @@
 				FAF2CBCD2B5FE5BF004055B7 /* Homework5 */,
 				FA589C312B610D2300EF51AA /* Homework5.1 */,
 				FA6EE0A72B63FCAA000BD794 /* Homework6 */,
+				FAAF15A22B698F7F00C06E74 /* Fly */,
 			);
 		};
 /* End PBXProject section */
@@ -535,6 +593,16 @@
 				FA7725E02B51B62E00CFA339 /* LaunchScreen.storyboard in Resources */,
 				FA7725DD2B51B62E00CFA339 /* Assets.xcassets in Resources */,
 				FA7725DB2B51B62C00CFA339 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAF15A12B698F7F00C06E74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAF15B22B698F8100C06E74 /* LaunchScreen.storyboard in Resources */,
+				FAAF15AF2B698F8100C06E74 /* Assets.xcassets in Resources */,
+				FAAF15AD2B698F7F00C06E74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +681,16 @@
 				FA7725D82B51B62C00CFA339 /* ViewController.swift in Sources */,
 				FA7725D42B51B62C00CFA339 /* AppDelegate.swift in Sources */,
 				FA7725D62B51B62C00CFA339 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAF159F2B698F7F00C06E74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAF15AA2B698F7F00C06E74 /* ViewController.swift in Sources */,
+				FAAF15A62B698F7F00C06E74 /* AppDelegate.swift in Sources */,
+				FAAF15A82B698F7F00C06E74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +777,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA7725DF2B51B62E00CFA339 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FAAF15AB2B698F7F00C06E74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAAF15AC2B698F7F00C06E74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAAF15B02B698F8100C06E74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAAF15B12B698F8100C06E74 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1183,6 +1277,62 @@
 			};
 			name = Release;
 		};
+		FAAF15B42B698F8100C06E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L23B96GPNM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fly/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alexpetrenko.Fly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAAF15B52B698F8100C06E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L23B96GPNM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fly/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alexpetrenko.Fly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FAF2CBDF2B5FE5C1004055B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1305,6 +1455,15 @@
 			buildConfigurations = (
 				FA7725E22B51B62E00CFA339 /* Debug */,
 				FA7725E32B51B62E00CFA339 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAF15B62B698F8100C06E74 /* Build configuration list for PBXNativeTarget "Fly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAF15B42B698F8100C06E74 /* Debug */,
+				FAAF15B52B698F8100C06E74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
