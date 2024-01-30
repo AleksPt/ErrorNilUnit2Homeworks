@@ -1,16 +1,11 @@
 import UIKit
 
-protocol AboutCityDelegate {
-    func setInfoAboutCity(
-        image: UIImage,
-        title: String,
-        description: String
-    )
-}
-
 final class AboutCity: UIViewController {
-    
+
     // MARK: - Public Properties
+    var cityInfo: CityGuide?
+    
+    // MARK: - Private Properties
     private lazy var scrollView: UIScrollView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.contentInsetAdjustmentBehavior = .never
@@ -26,7 +21,8 @@ final class AboutCity: UIViewController {
         return $0
     }(UIView())
     
-    private  lazy var photo: UIImageView = {
+    private lazy var photo: UIImageView = {
+        $0.image = cityInfo?.photoImage
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.layer.cornerRadius = 30
         $0.clipsToBounds = true
@@ -35,6 +31,7 @@ final class AboutCity: UIViewController {
     }(UIImageView())
     
     private lazy var titleLabel: UILabel = {
+        $0.text = cityInfo?.titleLabel
         $0.font = .systemFont(ofSize: 20, weight: .heavy)
         $0.numberOfLines = 0
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -42,6 +39,7 @@ final class AboutCity: UIViewController {
     }(UILabel())
     
     private lazy var text: UILabel = {
+        $0.text = cityInfo?.fullOverview
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.numberOfLines = 0
         return $0
@@ -85,14 +83,5 @@ final class AboutCity: UIViewController {
             
             scrollViewContent.bottomAnchor.constraint(equalTo: text.bottomAnchor, constant: 50),
         ])
-    }
-}
-
-// MARK: - Extensions
-extension AboutCity: AboutCityDelegate {
-    func setInfoAboutCity(image: UIImage, title: String, description: String) {
-        self.photo.image = image
-        self.titleLabel.text = title
-        self.text.text = description
     }
 }
