@@ -1,7 +1,7 @@
 import UIKit
 
 extension UILabel {
-    func settingLabel() {
+    func settingLabel(alignment: NSTextAlignment = .center) {
         self.textAlignment = .center
         self.adjustsFontSizeToFitWidth = true
         self.numberOfLines = 0
