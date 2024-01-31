@@ -8,20 +8,20 @@ struct OnboardingModel {
     static func mockData() -> [OnboardingModel] {
         return [
             OnboardingModel(
-                image: ._1,
-                title: "Все билеты и посадочные талоны в одном приложении"
+                image: ._8,
+                title: "Все билеты\nи посадочные талоны\nв одном приложении"
             ),
             OnboardingModel(
                 image: ._2,
-                title: "Регистрируйтесь на борт онлайн, без очередей"
+                title: "Регистрируйтесь\nна рейс онлайн,\nбез очередей"
             ),
             OnboardingModel(
-                image: ._3,
-                title: "Мгновенные уведомления об изменениях рейса"
+                image: ._7,
+                title: "Мгновенные\nуведомления\nоб изменениях рейса"
             ),
             OnboardingModel(
-                image: ._4,
-                title: "Приветственные 700 миль уже на вашем счету"
+                image: ._5,
+                title: "Приветственные\n700 миль уже\nна вашем счету"
             )
         ]
     }
