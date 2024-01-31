@@ -1,18 +1,13 @@
 import UIKit
 
-let mainColor = UIColor(
-    red: 78/255,
-    green: 100/255,
-    blue: 246/255,
-    alpha: 1
-)
-
 final class OnboardingCell: UICollectionViewCell {
     
     static let reuseId = "OnboardingCell"
     
+    // MARK: - Public Properties
     var nextClosure: (()->())?
     
+    // MARK: - Private Properties
     private lazy var imageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.contentMode = .scaleAspectFill
@@ -30,21 +25,19 @@ final class OnboardingCell: UICollectionViewCell {
     }(UIView())
     
     private lazy var titleLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.numberOfLines = 0
-        $0.textAlignment = .center
+        $0.settingLabel()
         $0.font = .init(name: "GillSans-SemiBold", size: 35)
         $0.textColor = .white
-        $0.adjustsFontSizeToFitWidth = true
         return $0
     }(UILabel())
     
     private lazy var continueButton: UIButton = {
-        $0.setTitle("Полетели!", for: .normal)
-        $0.setTitleColor(mainColor, for: .normal)
-        $0.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        $0.layer.cornerRadius = 25
-        $0.backgroundColor = .white
+        $0.settingButton(
+            title: "Полетели!",
+            titleColor: mainColor,
+            backgroundColor: .white,
+            isAutoresizing: true
+        )
         return $0
     }(
         UIButton(
@@ -63,11 +56,12 @@ final class OnboardingCell: UICollectionViewCell {
     }
     
     private lazy var nextSlideButton: UIButton = {
-        $0.setTitle("→", for: .normal)
-        $0.setTitleColor(mainColor, for: .normal)
-        $0.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        $0.layer.cornerRadius = 25
-        $0.backgroundColor = .white
+        $0.settingButton(
+            title: "→",
+            titleColor: mainColor,
+            backgroundColor: .white,
+            isAutoresizing: true
+        )
         $0.frame.origin.x = frame.width / 2 - 25
         $0.frame.origin.y = bounds.height - 120
         $0.frame.size = CGSize(width: 50, height: 50)
@@ -78,6 +72,7 @@ final class OnboardingCell: UICollectionViewCell {
         self?.nextClosure?()
     }
     
+    // MARK: - Overrides Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(imageView)
@@ -97,6 +92,10 @@ final class OnboardingCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+// MARK: - Extension
+extension OnboardingCell {
     func setImageView(image: UIImage) {
         imageView.image = image
     }
@@ -131,5 +130,6 @@ final class OnboardingCell: UICollectionViewCell {
             titleLabel.bottomAnchor.constraint(equalTo: customView.bottomAnchor, constant: -100)
         ])
     }
-    
 }
+
+

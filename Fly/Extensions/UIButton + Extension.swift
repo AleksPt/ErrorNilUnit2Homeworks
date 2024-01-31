@@ -6,9 +6,10 @@ extension UIButton {
         titleColor: UIColor = .white,
         fontSize: CGFloat = 20,
         fontName: String = "GillSans-SemiBold",
-        backgroundColor: UIColor = mainColor
+        backgroundColor: UIColor = mainColor,
+        isAutoresizing: Bool = false
     ) {
-        self.translatesAutoresizingMaskIntoConstraints = false
+        self.translatesAutoresizingMaskIntoConstraints = isAutoresizing
         self.setTitle(title, for: .normal)
         self.setTitleColor(titleColor, for: .normal)
         self.titleLabel?.font = .init(name: fontName, size: fontSize)

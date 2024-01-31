@@ -2,12 +2,11 @@ import UIKit
 
 final class AuthViewController: UIViewController {
 
+    // MARK: - Private Properties
     private lazy var titleLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.settingLabel()
         $0.text = "Войдите в аккаунт"
         $0.font = .init(name: "GillSans-SemiBold", size: 30)
-        $0.textAlignment = .center
-        $0.numberOfLines = 0
         return $0
     }(UILabel())
     
@@ -39,10 +38,8 @@ final class AuthViewController: UIViewController {
     }(UIButton())
     
     private lazy var dontHaveAccLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.settingLabel()
         $0.font = .systemFont(ofSize: 14)
-        $0.textAlignment = .center
-        $0.numberOfLines = 0
         $0.text = "У вас нет аккаунта?"
         return $0
     }(UILabel())
@@ -58,9 +55,18 @@ final class AuthViewController: UIViewController {
         return $0
     }(UIButton())
     
+    // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        setAllSubview()
+        setConstraints()
+    }
+}
+
+// MARK: - Extensions
+extension AuthViewController {
+    private func setAllSubview() {
         view.addSubview(titleLabel)
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
@@ -68,9 +74,8 @@ final class AuthViewController: UIViewController {
         view.addSubview(loginButton)
         view.addSubview(dontHaveAccLabel)
         view.addSubview(signinButton)
-        setConstraints()
     }
- 
+    
     private func setConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 150),
@@ -103,8 +108,4 @@ final class AuthViewController: UIViewController {
             signinButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
-    
 }
-
-
-

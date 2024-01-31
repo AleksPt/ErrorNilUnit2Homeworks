@@ -13,6 +13,7 @@
 		FA0787CB2B5D8E910014206B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0787CA2B5D8E910014206B /* Assets.xcassets */; };
 		FA0787CE2B5D8E910014206B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0787CC2B5D8E910014206B /* LaunchScreen.storyboard */; };
 		FA0787D42B5D8EE20014206B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0787D32B5D8EE20014206B /* SettingsViewController.swift */; };
+		FA0ADFDF2B6AAAC8001E9E8F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0ADFDE2B6AAAC8001E9E8F /* Color.swift */; };
 		FA1125192B6A7CF500E6BD22 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1125182B6A7CF500E6BD22 /* AuthViewController.swift */; };
 		FA11251B2B6A9DAF00E6BD22 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11251A2B6A9DAF00E6BD22 /* UITextField + Extension.swift */; };
 		FA4854852B558FAF00F48E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4854842B558FAF00F48E2E /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		FAAF15AF2B698F8100C06E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAF15AE2B698F8100C06E74 /* Assets.xcassets */; };
 		FAAF15B22B698F8100C06E74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF15B02B698F8100C06E74 /* LaunchScreen.storyboard */; };
 		FAAF15B82B6990F200C06E74 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15B72B6990F200C06E74 /* OnboardingModel.swift */; };
+		FAE2DB282B6AA630005094F3 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2DB272B6AA630005094F3 /* UILabel + Extension.swift */; };
 		FAF2CBD12B5FE5BF004055B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CBD02B5FE5BF004055B7 /* AppDelegate.swift */; };
 		FAF2CBD32B5FE5BF004055B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CBD22B5FE5BF004055B7 /* SceneDelegate.swift */; };
 		FAF2CBD52B5FE5BF004055B7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CBD42B5FE5BF004055B7 /* ProfileViewController.swift */; };
@@ -74,6 +76,7 @@
 		FA0787CD2B5D8E910014206B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0787CF2B5D8E910014206B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0787D32B5D8EE20014206B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FA0ADFDE2B6AAAC8001E9E8F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FA1125182B6A7CF500E6BD22 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		FA11251A2B6A9DAF00E6BD22 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
 		FA4854822B558FAF00F48E2E /* Homework3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +132,7 @@
 		FAAF15B12B698F8100C06E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAAF15B32B698F8100C06E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAF15B72B6990F200C06E74 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		FAE2DB272B6AA630005094F3 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		FAF2CBCE2B5FE5BF004055B7 /* Homework5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF2CBD02B5FE5BF004055B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF2CBD22B5FE5BF004055B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +217,32 @@
 				FA0787CF2B5D8E910014206B /* Info.plist */,
 			);
 			path = Homework4;
+			sourceTree = "<group>";
+		};
+		FA0ADFE02B6AAAF1001E9E8F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FA0ADFDE2B6AAAC8001E9E8F /* Color.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FA0ADFE12B6AAB0A001E9E8F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF15B72B6990F200C06E74 /* OnboardingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA0ADFE22B6AAB1A001E9E8F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA11251A2B6A9DAF00E6BD22 /* UITextField + Extension.swift */,
+				FA5E10572B6AA1BC00F47BDA /* UIButton + Extension.swift */,
+				FAE2DB272B6AA630005094F3 /* UILabel + Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FA4854832B558FAF00F48E2E /* Homework3 */ = {
@@ -325,9 +355,9 @@
 				FAAF15A92B698F7F00C06E74 /* ViewController.swift */,
 				FA1125182B6A7CF500E6BD22 /* AuthViewController.swift */,
 				FA77A12F2B6A66B7002A0A7F /* OnboardingCell.swift */,
-				FAAF15B72B6990F200C06E74 /* OnboardingModel.swift */,
-				FA11251A2B6A9DAF00E6BD22 /* UITextField + Extension.swift */,
-				FA5E10572B6AA1BC00F47BDA /* UIButton + Extension.swift */,
+				FA0ADFE02B6AAAF1001E9E8F /* Constants */,
+				FA0ADFE12B6AAB0A001E9E8F /* Models */,
+				FA0ADFE22B6AAB1A001E9E8F /* Extensions */,
 				FAAF15AE2B698F8100C06E74 /* Assets.xcassets */,
 				FAAF15B02B698F8100C06E74 /* LaunchScreen.storyboard */,
 				FAAF15B32B698F8100C06E74 /* Info.plist */,
@@ -704,7 +734,9 @@
 				FA77A1302B6A66B7002A0A7F /* OnboardingCell.swift in Sources */,
 				FAAF15AA2B698F7F00C06E74 /* ViewController.swift in Sources */,
 				FAAF15A62B698F7F00C06E74 /* AppDelegate.swift in Sources */,
+				FA0ADFDF2B6AAAC8001E9E8F /* Color.swift in Sources */,
 				FA1125192B6A7CF500E6BD22 /* AuthViewController.swift in Sources */,
+				FAE2DB282B6AA630005094F3 /* UILabel + Extension.swift in Sources */,
 				FAAF15A82B698F7F00C06E74 /* SceneDelegate.swift in Sources */,
 				FA5E10582B6AA1BC00F47BDA /* UIButton + Extension.swift in Sources */,
 			);
