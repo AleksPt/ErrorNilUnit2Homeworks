@@ -91,7 +91,7 @@ extension AuthViewController {
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 150),
             titleLabel.widthAnchor.constraint(equalToConstant: view.frame.width),
             
-            emailTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 100),
+            emailTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 32),
             emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
             emailTextField.heightAnchor.constraint(equalToConstant: 48),

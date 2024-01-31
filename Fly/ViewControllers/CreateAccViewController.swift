@@ -9,22 +9,22 @@ final class CreateAccViewController: UIViewController {
     }(UILabel())
     
     private lazy var usernameTextField: UITextField = {
-        $0.settingTextField(placeholder: "Username")
+        $0.settingTextField(placeholder: "Имя пользователя")
         return $0
     }(UITextField())
     
     private lazy var emailTextField: UITextField = {
-        $0.settingTextField(placeholder: "Your Email")
+        $0.settingTextField(placeholder: "Email")
         return $0
     }(UITextField())
     
     private lazy var passwordTextField: UITextField = {
-        $0.settingTextField(placeholder: "Password")
+        $0.settingTextField(placeholder: "Пароль")
         return $0
     }(UITextField())
     
     private lazy var confirmPassTextField: UITextField = {
-        $0.settingTextField(placeholder: "Confirm Password")
+        $0.settingTextField(placeholder: "Подтвердите пароль")
         return $0
     }(UITextField())
     
