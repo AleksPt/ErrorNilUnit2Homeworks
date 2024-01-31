@@ -39,7 +39,13 @@ final class AuthViewController: UIViewController {
     private lazy var loginButton: UIButton = {
         $0.settingButton(title: "Войти")
         return $0
-    }(UIButton())
+    }(UIButton(primaryAction: loginAction))
+    
+    private lazy var loginAction = UIAction { _ in
+        let vc = MainPageViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
     
     private lazy var dontHaveAccLabel: UILabel = {
         $0.settingLabel()
