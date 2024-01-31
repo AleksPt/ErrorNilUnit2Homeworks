@@ -14,6 +14,7 @@
 		FA0787CE2B5D8E910014206B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0787CC2B5D8E910014206B /* LaunchScreen.storyboard */; };
 		FA0787D42B5D8EE20014206B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0787D32B5D8EE20014206B /* SettingsViewController.swift */; };
 		FA08E3942B6AB0A1009A2A24 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08E3932B6AB0A1009A2A24 /* ForgotPassViewController.swift */; };
+		FA08E3962B6ABB76009A2A24 /* CreateAccViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08E3952B6ABB76009A2A24 /* CreateAccViewController.swift */; };
 		FA0ADFDF2B6AAAC8001E9E8F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0ADFDE2B6AAAC8001E9E8F /* Color.swift */; };
 		FA1125192B6A7CF500E6BD22 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1125182B6A7CF500E6BD22 /* AuthViewController.swift */; };
 		FA11251B2B6A9DAF00E6BD22 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11251A2B6A9DAF00E6BD22 /* UITextField + Extension.swift */; };
@@ -78,6 +79,7 @@
 		FA0787CF2B5D8E910014206B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0787D32B5D8EE20014206B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FA08E3932B6AB0A1009A2A24 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
+		FA08E3952B6ABB76009A2A24 /* CreateAccViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccViewController.swift; sourceTree = "<group>"; };
 		FA0ADFDE2B6AAAC8001E9E8F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FA1125182B6A7CF500E6BD22 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		FA11251A2B6A9DAF00E6BD22 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				FAAF15A92B698F7F00C06E74 /* ViewController.swift */,
 				FA1125182B6A7CF500E6BD22 /* AuthViewController.swift */,
 				FA08E3932B6AB0A1009A2A24 /* ForgotPassViewController.swift */,
+				FA08E3952B6ABB76009A2A24 /* CreateAccViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				FAAF15AA2B698F7F00C06E74 /* ViewController.swift in Sources */,
 				FAAF15A62B698F7F00C06E74 /* AppDelegate.swift in Sources */,
 				FA0ADFDF2B6AAAC8001E9E8F /* Color.swift in Sources */,
+				FA08E3962B6ABB76009A2A24 /* CreateAccViewController.swift in Sources */,
 				FA1125192B6A7CF500E6BD22 /* AuthViewController.swift in Sources */,
 				FAE2DB282B6AA630005094F3 /* UILabel + Extension.swift in Sources */,
 				FAAF15A82B698F7F00C06E74 /* SceneDelegate.swift in Sources */,

@@ -4,9 +4,7 @@ final class AuthViewController: UIViewController {
 
     // MARK: - Private Properties
     private lazy var titleLabel: UILabel = {
-        $0.settingLabel()
-        $0.text = "Войдите в аккаунт"
-        $0.font = .init(name: "GillSans-SemiBold", size: 30)
+        $0.settingTitleLabel(text: "Войдите в аккаунт")
         return $0
     }(UILabel())
     
@@ -30,7 +28,13 @@ final class AuthViewController: UIViewController {
             backgroundColor: .white
         )
         return $0
-    }(UIButton())
+    }(UIButton(primaryAction: forgotPassAction))
+    
+    private lazy var forgotPassAction = UIAction { _ in
+        let vc = ForgotPassViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
     
     private lazy var loginButton: UIButton = {
         $0.settingButton(title: "Войти")
@@ -53,7 +57,13 @@ final class AuthViewController: UIViewController {
         )
         $0.layer.borderWidth = 1
         return $0
-    }(UIButton())
+    }(UIButton(primaryAction: signinAction))
+    
+    private lazy var signinAction = UIAction { _ in
+        let vc = CreateAccViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
     
     // MARK: - Overrides Methods
     override func viewDidLoad() {

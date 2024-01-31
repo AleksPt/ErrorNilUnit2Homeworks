@@ -1,12 +1,10 @@
 import UIKit
 
-class ForgotPassViewController: UIViewController {
+final class ForgotPassViewController: UIViewController {
 
     // MARK: - Private Properties
     private lazy var titleLabel: UILabel = {
-        $0.settingLabel()
-        $0.text = "Не помню пароль"
-        $0.font = .init(name: "GillSans-SemiBold", size: 30)
+        $0.settingTitleLabel(text: "Не помню пароль")
         return $0
     }(UILabel())
     
