@@ -23,20 +23,18 @@ final class AuthViewController: UIViewController {
     }(UITextField())
     
     private lazy var forgotPasswordButton: UIButton = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle("Забыли пароль?", for: .normal)
-        $0.setTitleColor(mainColor, for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 14)
+        $0.settingButton(
+            title: "Забыли пароль?",
+            titleColor: mainColor,
+            fontSize: 14,
+            fontName: "GillSans",
+            backgroundColor: .white
+        )
         return $0
     }(UIButton())
     
     private lazy var loginButton: UIButton = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle("Войти", for: .normal)
-        $0.setTitleColor(.white, for: .normal)
-        $0.titleLabel?.font = .init(name: "GillSans-SemiBold", size: 20)
-        $0.layer.cornerRadius = 25
-        $0.backgroundColor = mainColor
+        $0.settingButton(title: "Войти")
         return $0
     }(UIButton())
     
@@ -50,10 +48,12 @@ final class AuthViewController: UIViewController {
     }(UILabel())
     
     private lazy var signinButton: UIButton = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle("Зарегистрироваться", for: .normal)
-        $0.setTitleColor(.black, for: .normal)
-        $0.layer.cornerRadius = 25
+        $0.settingButton(
+            title: "Зарегистрироваться",
+            titleColor: .black,
+            fontName: "GillSans",
+            backgroundColor: .systemBackground
+        )
         $0.layer.borderWidth = 1
         return $0
     }(UIButton())
@@ -105,3 +105,6 @@ final class AuthViewController: UIViewController {
     }
     
 }
+
+
+
