@@ -57,6 +57,11 @@ final class OnboardingCell: UICollectionViewCell {
         )
     )
     
+    private lazy var continueAction = UIAction { _ in
+        let vc = AuthViewController()
+        
+    }
+    
     private lazy var nextSlideButton: UIButton = {
         $0.setTitle("→", for: .normal)
         $0.setTitleColor(mainColor, for: .normal)
