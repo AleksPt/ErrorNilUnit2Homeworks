@@ -12,16 +12,12 @@ final class AuthViewController: UIViewController {
     }(UILabel())
     
     private lazy var emailTextField: UITextField = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.placeholder = "Ваш email"
-        $0.borderStyle = .roundedRect
+        $0.settingTextField(placeholder: "Ваш email")
         return $0
     }(UITextField())
     
     private lazy var passwordTextField: UITextField = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.placeholder = "Ваш пароль"
-        $0.borderStyle = .roundedRect
+        $0.settingTextField(placeholder: "Ваш пароль")
         $0.isSecureTextEntry = true
         return $0
     }(UITextField())
