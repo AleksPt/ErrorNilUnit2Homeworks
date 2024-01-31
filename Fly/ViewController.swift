@@ -45,12 +45,11 @@ extension ViewController: UICollectionViewDataSource {
             cell.addNextButton()
         }
         
-        let nextSlideAction = UIAction { _ in
-            self.collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
+        cell.nextClosure = { [weak self] in
+            let nextIndexPath = IndexPath(item: indexPath.item + 1, section: 0)
+            self?.collectionView.scrollToItem(at: nextIndexPath, at: .left, animated: true)
         }
         
         return cell
     }
-    
-    
 }

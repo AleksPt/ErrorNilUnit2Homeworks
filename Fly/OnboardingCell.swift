@@ -1,8 +1,4 @@
 import UIKit
-protocol OnboardingCellDelegate {
-    
-}
-
 
 let mainColor = UIColor(
     red: 78/255,
@@ -14,6 +10,8 @@ let mainColor = UIColor(
 final class OnboardingCell: UICollectionViewCell {
     
     static let reuseId = "OnboardingCell"
+    
+    var nextClosure: (()->())?
     
     private lazy var imageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -65,11 +63,15 @@ final class OnboardingCell: UICollectionViewCell {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 20)
         $0.layer.cornerRadius = 25
         $0.backgroundColor = .white
-        $0.center.x = center.x
+        $0.frame.origin.x = frame.width / 2 - 25
         $0.frame.origin.y = bounds.height - 120
         $0.frame.size = CGSize(width: 50, height: 50)
         return $0
     }(UIButton(primaryAction: nextSlideAction))
+    
+    private lazy var nextSlideAction = UIAction { [weak self] _ in
+        self?.nextClosure?()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
