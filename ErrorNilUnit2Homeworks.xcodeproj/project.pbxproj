@@ -219,6 +219,23 @@
 			path = Homework4;
 			sourceTree = "<group>";
 		};
+		FA08E3912B6AAC27009A2A24 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF15A92B698F7F00C06E74 /* ViewController.swift */,
+				FA1125182B6A7CF500E6BD22 /* AuthViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA08E3922B6AAC3C009A2A24 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA77A12F2B6A66B7002A0A7F /* OnboardingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		FA0ADFE02B6AAAF1001E9E8F /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,9 +369,8 @@
 			children = (
 				FAAF15A52B698F7F00C06E74 /* AppDelegate.swift */,
 				FAAF15A72B698F7F00C06E74 /* SceneDelegate.swift */,
-				FAAF15A92B698F7F00C06E74 /* ViewController.swift */,
-				FA1125182B6A7CF500E6BD22 /* AuthViewController.swift */,
-				FA77A12F2B6A66B7002A0A7F /* OnboardingCell.swift */,
+				FA08E3912B6AAC27009A2A24 /* ViewControllers */,
+				FA08E3922B6AAC3C009A2A24 /* Cells */,
 				FA0ADFE02B6AAAF1001E9E8F /* Constants */,
 				FA0ADFE12B6AAB0A001E9E8F /* Models */,
 				FA0ADFE22B6AAB1A001E9E8F /* Extensions */,

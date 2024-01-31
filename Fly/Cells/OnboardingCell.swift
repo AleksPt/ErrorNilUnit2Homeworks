@@ -6,6 +6,7 @@ final class OnboardingCell: UICollectionViewCell {
     
     // MARK: - Public Properties
     var nextClosure: (()->())?
+    var transitionOnAuthVC: (()->())?
     
     // MARK: - Private Properties
     private lazy var imageView: UIImageView = {
@@ -46,13 +47,13 @@ final class OnboardingCell: UICollectionViewCell {
                 y: bounds.height - 120,
                 width: bounds.width - 40,
                 height: 50
-            )
+            ),
+            primaryAction: continueAction
         )
     )
     
-    private lazy var continueAction = UIAction { _ in
-        let vc = AuthViewController()
-        
+    private lazy var continueAction = UIAction { [weak self] _  in
+        self?.transitionOnAuthVC?()
     }
     
     private lazy var nextSlideButton: UIButton = {
