@@ -11,10 +11,10 @@ final class MainPageViewController: UIViewController {
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.itemSize = CGSize(
-            width: view.frame.width,
+            width: 200,
             height: view.frame.height
         )
-        
+        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.register(
             SliderCell.self,
             forCellWithReuseIdentifier: SliderCell.reuseId
@@ -24,7 +24,7 @@ final class MainPageViewController: UIViewController {
         return $0
     }(
         UICollectionView(
-            frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 700),
+            frame: .zero/*CGRect(x: 0, y: 0, width: view.frame.width, height: 700)*/,
             collectionViewLayout: UICollectionViewFlowLayout()
         )
     )
@@ -34,6 +34,12 @@ final class MainPageViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(collectionView)
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.topAnchor, constant: 450)
+        ])
     }
 }
 

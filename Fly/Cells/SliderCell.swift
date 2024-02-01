@@ -19,6 +19,7 @@ final class SliderCell: UICollectionViewCell {
     
     private lazy var photo: UIImageView = {
         $0.settingImage()
+        $0.addGradient(frame: CGRect(x: 0, y: frame.midY, width: frame.width, height: frame.width / 1.5))
         return $0
     }(UIImageView())
     
@@ -39,7 +40,7 @@ final class SliderCell: UICollectionViewCell {
     private lazy var priceLabel: UILabel = {
         $0.settingLabel(alignment: .right)
         $0.textColor = .white
-        $0.font = .boldSystemFont(ofSize: 18)
+        $0.font = .boldSystemFont(ofSize: 16)
         return $0
     }(UILabel())
     
@@ -96,7 +97,7 @@ extension SliderCell {
             
             photo.topAnchor.constraint(equalTo: topAnchor, constant: 300),
             photo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            photo.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -200),
+            photo.trailingAnchor.constraint(equalTo: trailingAnchor),
             photo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -300),
             
             toCityLabel.topAnchor.constraint(equalTo: photo.bottomAnchor, constant: -70),
