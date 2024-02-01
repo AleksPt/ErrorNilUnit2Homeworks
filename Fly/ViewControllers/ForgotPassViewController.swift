@@ -51,9 +51,7 @@ final class ForgotPassViewController: UIViewController {
     }(UIButton(primaryAction: rememberPassAction))
     
     private lazy var rememberPassAction = UIAction { _ in
-        let vc = AuthViewController()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        self.dismiss(animated: true)
     }
     
     // MARK: - Overrides Methods

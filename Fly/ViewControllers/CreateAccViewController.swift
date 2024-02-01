@@ -45,9 +45,7 @@ final class CreateAccViewController: UIViewController {
     }(UIButton(primaryAction: loginAction))
     
     private lazy var loginAction = UIAction { _ in
-        let vc = AuthViewController()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        self.dismiss(animated: true)
     }
     
     // MARK: - Overrides Methods
