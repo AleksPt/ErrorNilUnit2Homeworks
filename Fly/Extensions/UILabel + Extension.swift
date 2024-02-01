@@ -15,5 +15,6 @@ extension UILabel {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.font = .init(name: "GillSans-SemiBold", size: size)
         self.text = text
+        self.textColor = labelsColor
     }
 }

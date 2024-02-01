@@ -15,12 +15,13 @@ final class MainPageViewController: UIViewController {
         $0.settingLabel(alignment: .right)
         $0.text = "Билеты по выгодным ценам"
         $0.font = .systemFont(ofSize: 14)
+        $0.textColor = labelsColor
         return $0
     }(UILabel())
     
     private lazy var arrowsLabel: UILabel = {
         $0.settingLabel(alignment: .right)
-        $0.text = "⬅️ ➡️"
+        $0.text = "👉"
         return $0
     }(UILabel())
     
