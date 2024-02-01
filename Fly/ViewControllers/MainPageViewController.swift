@@ -5,6 +5,25 @@ final class MainPageViewController: UIViewController {
     // MARK: - Private Properties
     private let collectionData = OffersModel.mockData()
     
+    // MARK: - Private Properties
+    private lazy var titleLabel: UILabel = {
+        $0.settingTitleLabel(text: "Лучшие предложения")
+        return $0
+    }(UILabel())
+    
+    private lazy var descriptionLabel: UILabel = {
+        $0.settingLabel(alignment: .right)
+        $0.text = "Билеты по выгодным ценам"
+        $0.font = .systemFont(ofSize: 14)
+        return $0
+    }(UILabel())
+    
+    private lazy var arrowsLabel: UILabel = {
+        $0.settingLabel(alignment: .right)
+        $0.text = "⬅️ ➡️"
+        return $0
+    }(UILabel())
+    
     private lazy var collectionView: UICollectionView = {
         let layout = $0.collectionViewLayout as! UICollectionViewFlowLayout
         layout.scrollDirection = .horizontal
@@ -24,7 +43,7 @@ final class MainPageViewController: UIViewController {
         return $0
     }(
         UICollectionView(
-            frame: .zero/*CGRect(x: 0, y: 0, width: view.frame.width, height: 700)*/,
+            frame: .zero,
             collectionViewLayout: UICollectionViewFlowLayout()
         )
     )
@@ -33,13 +52,8 @@ final class MainPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        view.addSubview(collectionView)
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.topAnchor, constant: 450)
-        ])
+        setAllSubview()
+        setConstraints()
     }
 }
 
@@ -74,5 +88,32 @@ extension MainPageViewController: UICollectionViewDataSource {
         cell.setPriceLabel(price: priceLabel)
         
         return cell
+    }
+}
+
+extension MainPageViewController {
+    private func setAllSubview() {
+        view.addSubview(titleLabel)
+        view.addSubview(descriptionLabel)
+        view.addSubview(arrowsLabel)
+        view.addSubview(collectionView)
+    }
+    
+    private func setConstraints() {
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            
+            arrowsLabel.bottomAnchor.constraint(equalTo: collectionView.topAnchor),
+            arrowsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            
+            collectionView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 20),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: 280)
+        ])
     }
 }

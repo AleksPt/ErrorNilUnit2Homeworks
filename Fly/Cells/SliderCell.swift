@@ -47,8 +47,6 @@ final class SliderCell: UICollectionViewCell {
     // MARK: - Overrides Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(titleLabel)
-        addSubview(descriptionLabel)
         addSubview(photo)
         addSubview(toCityLabel)
         addSubview(fromCityLabel)
@@ -89,12 +87,6 @@ extension SliderCell {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 200),
-            titleLabel.leadingAnchor.constraint(equalTo: photo.leadingAnchor),
-            
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
-            descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            
             photo.topAnchor.constraint(equalTo: topAnchor, constant: 300),
             photo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             photo.trailingAnchor.constraint(equalTo: trailingAnchor),

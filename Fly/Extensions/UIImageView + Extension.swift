@@ -2,7 +2,7 @@ import UIKit
 
 extension UIImageView {
     func settingImage() {
-        self.layer.cornerRadius = 15
+        self.layer.cornerRadius = 25
         self.clipsToBounds = true
         self.translatesAutoresizingMaskIntoConstraints = false
         self.contentMode = .scaleAspectFill
