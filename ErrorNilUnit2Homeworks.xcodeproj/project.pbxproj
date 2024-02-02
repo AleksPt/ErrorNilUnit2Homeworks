@@ -68,6 +68,8 @@
 		FAAF15AF2B698F8100C06E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAF15AE2B698F8100C06E74 /* Assets.xcassets */; };
 		FAAF15B22B698F8100C06E74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF15B02B698F8100C06E74 /* LaunchScreen.storyboard */; };
 		FAAF15B82B6990F200C06E74 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15B72B6990F200C06E74 /* OnboardingModel.swift */; };
+		FAD89A852B6D8D0700673316 /* CocktailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD89A842B6D8D0700673316 /* CocktailModel.swift */; };
+		FAD89A872B6D9C0000673316 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD89A862B6D9C0000673316 /* Constants.swift */; };
 		FAE2DB282B6AA630005094F3 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2DB272B6AA630005094F3 /* UILabel + Extension.swift */; };
 		FAF2CBD12B5FE5BF004055B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CBD02B5FE5BF004055B7 /* AppDelegate.swift */; };
 		FAF2CBD32B5FE5BF004055B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CBD22B5FE5BF004055B7 /* SceneDelegate.swift */; };
@@ -156,6 +158,8 @@
 		FAAF15B12B698F8100C06E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAAF15B32B698F8100C06E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAF15B72B6990F200C06E74 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		FAD89A842B6D8D0700673316 /* CocktailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailModel.swift; sourceTree = "<group>"; };
+		FAD89A862B6D9C0000673316 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FAE2DB272B6AA630005094F3 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		FAF2CBCE2B5FE5BF004055B7 /* Homework5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF2CBD02B5FE5BF004055B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 			children = (
 				FA08E3C52B6D860F009A2A24 /* AppDelegate.swift */,
 				FA08E3C72B6D860F009A2A24 /* SceneDelegate.swift */,
+				FAD89A842B6D8D0700673316 /* CocktailModel.swift */,
+				FAD89A862B6D9C0000673316 /* Constants.swift */,
 				FA08E3C92B6D860F009A2A24 /* ViewController.swift */,
 				FA08E3CE2B6D8611009A2A24 /* Assets.xcassets */,
 				FA08E3D02B6D8611009A2A24 /* LaunchScreen.storyboard */,
@@ -774,6 +780,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA08E3CA2B6D860F009A2A24 /* ViewController.swift in Sources */,
+				FAD89A852B6D8D0700673316 /* CocktailModel.swift in Sources */,
+				FAD89A872B6D9C0000673316 /* Constants.swift in Sources */,
 				FA08E3C62B6D860F009A2A24 /* AppDelegate.swift in Sources */,
 				FA08E3C82B6D860F009A2A24 /* SceneDelegate.swift in Sources */,
 			);

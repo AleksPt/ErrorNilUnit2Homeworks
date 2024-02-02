@@ -15,26 +15,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="GrW-Dd-0FO">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="c2H-GK-kyt">
+                                <rect key="frame" x="40" y="291" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="0D4-Qc-Jzs"/>
+                                    <constraint firstAttribute="width" constant="350" id="SoX-Yn-UbO"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.35203483699999999" green="0.75279015299999996" blue="0.81643086669999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="GrW-Dd-0FO" secondAttribute="bottom" id="aq9-Up-lyA"/>
-                            <constraint firstItem="GrW-Dd-0FO" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="j1K-IX-IhR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GrW-Dd-0FO" secondAttribute="trailing" id="nrd-TS-tr9"/>
-                            <constraint firstItem="GrW-Dd-0FO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="shB-O6-hPJ"/>
+                            <constraint firstItem="c2H-GK-kyt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ZOs-fZ-ctK"/>
+                            <constraint firstItem="c2H-GK-kyt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="i8q-MU-mR9"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+            <point key="canvasLocation" x="51.627906976744185" y="374.03433476394855"/>
         </scene>
     </scenes>
     <resources>
-        <image name="launchScreen" width="4377" height="6566"/>
+        <image name="launchScreen" width="800" height="600"/>
     </resources>
 </document>
