@@ -19,6 +19,12 @@
 		FA08E39A2B6AD426009A2A24 /* OffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08E3992B6AD426009A2A24 /* OffersModel.swift */; };
 		FA08E39C2B6AD9BE009A2A24 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08E39B2B6AD9BE009A2A24 /* SliderCell.swift */; };
 		FA08E39E2B6ADB6F009A2A24 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08E39D2B6ADB6F009A2A24 /* UIImageView + Extension.swift */; };
+		FA08E3C62B6D860F009A2A24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08E3C52B6D860F009A2A24 /* AppDelegate.swift */; };
+		FA08E3C82B6D860F009A2A24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08E3C72B6D860F009A2A24 /* SceneDelegate.swift */; };
+		FA08E3CA2B6D860F009A2A24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08E3C92B6D860F009A2A24 /* ViewController.swift */; };
+		FA08E3CD2B6D860F009A2A24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA08E3CB2B6D860F009A2A24 /* Main.storyboard */; };
+		FA08E3CF2B6D8611009A2A24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA08E3CE2B6D8611009A2A24 /* Assets.xcassets */; };
+		FA08E3D22B6D8611009A2A24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA08E3D02B6D8611009A2A24 /* LaunchScreen.storyboard */; };
 		FA0ADFDF2B6AAAC8001E9E8F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0ADFDE2B6AAAC8001E9E8F /* Color.swift */; };
 		FA1125192B6A7CF500E6BD22 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1125182B6A7CF500E6BD22 /* AuthViewController.swift */; };
 		FA11251B2B6A9DAF00E6BD22 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11251A2B6A9DAF00E6BD22 /* UITextField + Extension.swift */; };
@@ -88,6 +94,14 @@
 		FA08E3992B6AD426009A2A24 /* OffersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersModel.swift; sourceTree = "<group>"; };
 		FA08E39B2B6AD9BE009A2A24 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		FA08E39D2B6ADB6F009A2A24 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
+		FA08E3C32B6D860E009A2A24 /* Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA08E3C52B6D860F009A2A24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA08E3C72B6D860F009A2A24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA08E3C92B6D860F009A2A24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA08E3CC2B6D860F009A2A24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA08E3CE2B6D8611009A2A24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA08E3D12B6D8611009A2A24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA08E3D32B6D8611009A2A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0ADFDE2B6AAAC8001E9E8F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FA1125182B6A7CF500E6BD22 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		FA11251A2B6A9DAF00E6BD22 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
@@ -158,6 +172,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		FA0787BC2B5D8E8F0014206B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA08E3C02B6D860E009A2A24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,6 +273,20 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		FA08E3C42B6D860F009A2A24 /* Drink */ = {
+			isa = PBXGroup;
+			children = (
+				FA08E3C52B6D860F009A2A24 /* AppDelegate.swift */,
+				FA08E3C72B6D860F009A2A24 /* SceneDelegate.swift */,
+				FA08E3C92B6D860F009A2A24 /* ViewController.swift */,
+				FA08E3CB2B6D860F009A2A24 /* Main.storyboard */,
+				FA08E3CE2B6D8611009A2A24 /* Assets.xcassets */,
+				FA08E3D02B6D8611009A2A24 /* LaunchScreen.storyboard */,
+				FA08E3D32B6D8611009A2A24 /* Info.plist */,
+			);
+			path = Drink;
+			sourceTree = "<group>";
+		};
 		FA0ADFE02B6AAAF1001E9E8F /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +341,7 @@
 				FA589C332B610D2300EF51AA /* Homework5.1 */,
 				FA6EE0A92B63FCAA000BD794 /* Homework6 */,
 				FAAF15A42B698F7F00C06E74 /* Fly */,
+				FA08E3C42B6D860F009A2A24 /* Drink */,
 				FA48BC302B4D5FE10056F4B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -321,6 +357,7 @@
 				FA589C322B610D2300EF51AA /* Homework5.1.app */,
 				FA6EE0A82B63FCAA000BD794 /* Homework6.app */,
 				FAAF15A32B698F7F00C06E74 /* Fly.app */,
+				FA08E3C32B6D860E009A2A24 /* Drink.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -432,6 +469,23 @@
 			name = Homework4;
 			productName = Homework4;
 			productReference = FA0787BF2B5D8E8F0014206B /* Homework4.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA08E3C22B6D860E009A2A24 /* Drink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA08E3D62B6D8611009A2A24 /* Build configuration list for PBXNativeTarget "Drink" */;
+			buildPhases = (
+				FA08E3BF2B6D860E009A2A24 /* Sources */,
+				FA08E3C02B6D860E009A2A24 /* Frameworks */,
+				FA08E3C12B6D860E009A2A24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Drink;
+			productName = Drink;
+			productReference = FA08E3C32B6D860E009A2A24 /* Drink.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FA4854812B558FAF00F48E2E /* Homework3 */ = {
@@ -566,6 +620,9 @@
 					FA0787BE2B5D8E8F0014206B = {
 						CreatedOnToolsVersion = 15.1;
 					};
+					FA08E3C22B6D860E009A2A24 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					FA4854812B558FAF00F48E2E = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -610,6 +667,7 @@
 				FA589C312B610D2300EF51AA /* Homework5.1 */,
 				FA6EE0A72B63FCAA000BD794 /* Homework6 */,
 				FAAF15A22B698F7F00C06E74 /* Fly */,
+				FA08E3C22B6D860E009A2A24 /* Drink */,
 			);
 		};
 /* End PBXProject section */
@@ -621,6 +679,16 @@
 			files = (
 				FA0787CE2B5D8E910014206B /* LaunchScreen.storyboard in Resources */,
 				FA0787CB2B5D8E910014206B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA08E3C12B6D860E009A2A24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA08E3D22B6D8611009A2A24 /* LaunchScreen.storyboard in Resources */,
+				FA08E3CF2B6D8611009A2A24 /* Assets.xcassets in Resources */,
+				FA08E3CD2B6D860F009A2A24 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +770,16 @@
 				FA0787C42B5D8E8F0014206B /* SceneDelegate.swift in Sources */,
 				FA0787D42B5D8EE20014206B /* SettingsViewController.swift in Sources */,
 				FA81DAD02B5DA2F9004F133B /* InfoViewContoller.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA08E3BF2B6D860E009A2A24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA08E3CA2B6D860F009A2A24 /* ViewController.swift in Sources */,
+				FA08E3C62B6D860F009A2A24 /* AppDelegate.swift in Sources */,
+				FA08E3C82B6D860F009A2A24 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,6 +879,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA0787CD2B5D8E910014206B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FA08E3CB2B6D860F009A2A24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA08E3CC2B6D860F009A2A24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA08E3D02B6D8611009A2A24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA08E3D12B6D8611009A2A24 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -935,6 +1029,62 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alexpetrenko.Homework4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA08E3D42B6D8611009A2A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L23B96GPNM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Drink/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alexpetrenko.Drink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA08E3D52B6D8611009A2A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L23B96GPNM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Drink/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alexpetrenko.Drink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1479,6 +1629,15 @@
 			buildConfigurations = (
 				FA0787D02B5D8E910014206B /* Debug */,
 				FA0787D12B5D8E910014206B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA08E3D62B6D8611009A2A24 /* Build configuration list for PBXNativeTarget "Drink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA08E3D42B6D8611009A2A24 /* Debug */,
+				FA08E3D52B6D8611009A2A24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
