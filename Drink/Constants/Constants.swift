@@ -2,7 +2,7 @@ import UIKit
 
 struct ConstantsFont {
     static let titleFont = "DINCondensed-Bold"
-    static let descriptionFont = "HelveticaNeue-UltraLight"
+    static let descriptionFont = "HelveticaNeue-Light"
 }
 
 struct ConstantsColor {
@@ -10,6 +10,13 @@ struct ConstantsColor {
         red: 90 / 255,
         green: 192 / 255,
         blue: 208 / 255,
+        alpha: 1
+    )
+    
+    static let descriptionColor = UIColor(
+        red: 26 / 255,
+        green: 27 / 255,
+        blue: 34 / 255,
         alpha: 1
     )
     
@@ -27,3 +34,5 @@ struct ConstantsColor {
         alpha: 1
     )
 }
+
+// 26 27 34
