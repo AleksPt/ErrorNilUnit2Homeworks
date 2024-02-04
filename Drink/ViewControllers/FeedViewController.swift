@@ -2,11 +2,12 @@ import UIKit
 
 final class FeedViewController: UIViewController {
     
-    private let collectionData = [CocktailModel.mockData()]
+    private let collectionData = CocktailModel.mockData()
     
     private lazy var collectionView: UICollectionView = {
         let layout = $0.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+//        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.itemSize = CGSize(width: view.frame.width, height: view.frame.height)
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 0
@@ -19,7 +20,7 @@ final class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(collectionView)
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = ConstantsColor.backgroundCollectionViewColor
     }
 
 }
@@ -41,7 +42,11 @@ extension FeedViewController: UICollectionViewDataSource {
             for: indexPath
         ) as! FeedCell
         
-        
+        cell.setupCell(
+            picture: collectionData[indexPath.item].photo,
+            title: collectionData[indexPath.item].title,
+            description: collectionData[indexPath.item].description
+        )
         
         return cell
     }

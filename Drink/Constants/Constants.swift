@@ -20,10 +20,17 @@ struct ConstantsColor {
         alpha: 1
     )
     
-    static let backgroundViewColor = UIColor(
-        red: 254 / 255,
-        green: 250 / 255,
-        blue: 236 / 255,
+    static let backgroundCollectionViewColor = UIColor(
+        red: 255 / 255,
+        green: 255 / 255,
+        blue: 255 / 255,
+        alpha: 1
+    )
+    
+    static let backgroundCellViewColor = UIColor(
+        red: 240 / 255,
+        green: 240 / 255,
+        blue: 240 / 255,
         alpha: 1
     )
     
@@ -35,4 +42,4 @@ struct ConstantsColor {
     )
 }
 
-// 26 27 34
+//rgb(250,231,163)
