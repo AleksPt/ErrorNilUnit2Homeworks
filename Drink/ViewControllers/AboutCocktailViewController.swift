@@ -2,8 +2,11 @@ import UIKit
 
 final class AboutCocktailViewController: UIViewController {
     
+    // MARK: - Public Properties
     var cocktailItem: CocktailModel?
-    var ingredients: [CocktailModel.Ingredients] = []
+    
+    // MARK: - Private Properties
+    private var ingredients: [CocktailModel.Ingredients] = []
     
     private lazy var scrollView: UIScrollView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -59,6 +62,7 @@ final class AboutCocktailViewController: UIViewController {
         return $0
     }(UITableView(frame: view.frame, style: .insetGrouped))
     
+    // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = ConstantsColor.dark
@@ -68,6 +72,7 @@ final class AboutCocktailViewController: UIViewController {
         setupConstraints()
     }
     
+    // MARK: - Private Methods
     private func parsingIngredientsModel() {
         if let items = cocktailItem?.ingredients {
             for item in items {

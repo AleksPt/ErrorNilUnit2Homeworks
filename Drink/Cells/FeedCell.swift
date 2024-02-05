@@ -2,10 +2,12 @@ import UIKit
 
 final class FeedCell: UICollectionViewCell {
         
+    // MARK: - Public Properties
     var transition: (()->())?
     
     static let reuseId = "FeedCell"
     
+    // MARK: - Private Properties
     private lazy var cellView: UIView = {
         $0.backgroundColor = ConstantsColor.light
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -58,6 +60,7 @@ final class FeedCell: UICollectionViewCell {
         self?.transition?()
     }
     
+    // MARK: - Overrides Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(cellView)
@@ -73,7 +76,10 @@ final class FeedCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+}
+
+// MARK: - Setup Cell
+extension FeedCell {
     func setupCell(picture: UIImage, title: String, description: String) {
         self.pictureImage.image = picture
         self.titleLabel.text = title

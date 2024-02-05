@@ -2,6 +2,7 @@ import UIKit
 
 final class FeedViewController: UIViewController {
         
+    // MARK: - Private Properties
     private let collectionData = CocktailModel.mockData()
     
     private lazy var collectionView: UICollectionView = {
@@ -14,8 +15,14 @@ final class FeedViewController: UIViewController {
         $0.register(FeedCell.self, forCellWithReuseIdentifier: FeedCell.reuseId)
         $0.dataSource = self
         return $0
-    }(UICollectionView(frame: view.frame, collectionViewLayout: UICollectionViewFlowLayout()))
+    }(
+        UICollectionView(
+            frame: view.frame,
+            collectionViewLayout: UICollectionViewFlowLayout()
+        )
+    )
     
+    // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(collectionView)
@@ -24,6 +31,7 @@ final class FeedViewController: UIViewController {
 
 }
 
+// MARK: - UICollectionViewDataSource
 extension FeedViewController: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -57,3 +65,5 @@ extension FeedViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
+
