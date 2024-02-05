@@ -72,6 +72,9 @@
 		FAC0F6FE2B6DA8E600FD2BB6 /* Extensions + UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0F6FD2B6DA8E600FD2BB6 /* Extensions + UILabel.swift */; };
 		FAC0F7002B6DAD0E00FD2BB6 /* Extensions + UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0F6FF2B6DAD0E00FD2BB6 /* Extensions + UIButton.swift */; };
 		FAC0F7052B6E655900FD2BB6 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0F7042B6E655900FD2BB6 /* FeedCell.swift */; };
+		FAC0F7082B6FC2C600FD2BB6 /* AboutCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0F7072B6FC2C600FD2BB6 /* AboutCocktailViewController.swift */; };
+		FAC0F70A2B70063200FD2BB6 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0F7092B70063200FD2BB6 /* RecipeCell.swift */; };
+		FAC0F70C2B701E4E00FD2BB6 /* IngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0F70B2B701E4E00FD2BB6 /* IngredientsCell.swift */; };
 		FAD89A852B6D8D0700673316 /* CocktailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD89A842B6D8D0700673316 /* CocktailModel.swift */; };
 		FAD89A872B6D9C0000673316 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD89A862B6D9C0000673316 /* Constants.swift */; };
 		FAE2DB282B6AA630005094F3 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2DB272B6AA630005094F3 /* UILabel + Extension.swift */; };
@@ -166,6 +169,9 @@
 		FAC0F6FD2B6DA8E600FD2BB6 /* Extensions + UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UILabel.swift"; sourceTree = "<group>"; };
 		FAC0F6FF2B6DAD0E00FD2BB6 /* Extensions + UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIButton.swift"; sourceTree = "<group>"; };
 		FAC0F7042B6E655900FD2BB6 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		FAC0F7072B6FC2C600FD2BB6 /* AboutCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCocktailViewController.swift; sourceTree = "<group>"; };
+		FAC0F7092B70063200FD2BB6 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		FAC0F70B2B701E4E00FD2BB6 /* IngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsCell.swift; sourceTree = "<group>"; };
 		FAD89A842B6D8D0700673316 /* CocktailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailModel.swift; sourceTree = "<group>"; };
 		FAD89A862B6D9C0000673316 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FAE2DB272B6AA630005094F3 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
@@ -479,6 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				FA08E3C92B6D860F009A2A24 /* FeedViewController.swift */,
+				FAC0F7072B6FC2C600FD2BB6 /* AboutCocktailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -487,6 +494,8 @@
 			isa = PBXGroup;
 			children = (
 				FAC0F7042B6E655900FD2BB6 /* FeedCell.swift */,
+				FAC0F7092B70063200FD2BB6 /* RecipeCell.swift */,
+				FAC0F70B2B701E4E00FD2BB6 /* IngredientsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -835,8 +844,11 @@
 				FAD89A852B6D8D0700673316 /* CocktailModel.swift in Sources */,
 				FAC0F6FE2B6DA8E600FD2BB6 /* Extensions + UILabel.swift in Sources */,
 				FAC0F7002B6DAD0E00FD2BB6 /* Extensions + UIButton.swift in Sources */,
+				FAC0F70C2B701E4E00FD2BB6 /* IngredientsCell.swift in Sources */,
 				FAC0F6FC2B6DA6AF00FD2BB6 /* Extensions + UIImageView.swift in Sources */,
 				FAD89A872B6D9C0000673316 /* Constants.swift in Sources */,
+				FAC0F70A2B70063200FD2BB6 /* RecipeCell.swift in Sources */,
+				FAC0F7082B6FC2C600FD2BB6 /* AboutCocktailViewController.swift in Sources */,
 				FA08E3C62B6D860F009A2A24 /* AppDelegate.swift in Sources */,
 				FA08E3C82B6D860F009A2A24 /* SceneDelegate.swift in Sources */,
 				FAC0F7052B6E655900FD2BB6 /* FeedCell.swift in Sources */,
