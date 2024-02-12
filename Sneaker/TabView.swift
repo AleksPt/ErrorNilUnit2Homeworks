@@ -6,7 +6,7 @@ final class TabView: UITabBarController {
         super.viewDidLoad()
 
         let mainVC = setupViewControllers(
-            MainVeiwController(),
+            MainViewController(),
             title: "Main Page",
             image: Image.mainPageImage
         )
