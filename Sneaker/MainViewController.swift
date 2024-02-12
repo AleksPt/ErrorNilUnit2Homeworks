@@ -3,6 +3,7 @@ import UIKit
 final class MainViewController: UIViewController {
 
     private lazy var scrollView: UIScrollView = {
+        $0.contentSize = scrollViewContent.frame.size
         $0.frame = CGRect(
             x: 0,
             y: 0,
@@ -18,7 +19,7 @@ final class MainViewController: UIViewController {
             x: 0,
             y: 0,
             width: view.frame.width,
-            height: 5000
+            height: view.frame.height
         )
         $0.backgroundColor = .red
         $0.addSubview(textField)
@@ -28,14 +29,14 @@ final class MainViewController: UIViewController {
     private lazy var textField: UITextField = {
         $0.frame = CGRect(
             x: 60,
-            y: view.frame.height - 100,
+            y: view.frame.maxY - 250,
             width: view.frame.width - 120,
-            height: 50
+            height: 40
         )
         $0.backgroundColor = .white
         $0.placeholder = "Add any text"
         $0.padding(size: 16)
-        $0.layer.cornerRadius = 10
+        $0.layer.cornerRadius = 5
         return $0
     }(UITextField())
     
