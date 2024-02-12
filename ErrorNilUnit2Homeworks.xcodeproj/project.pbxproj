@@ -73,6 +73,7 @@
 		FA856D322B7A3C3E00E5A971 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856D312B7A3C3E00E5A971 /* TabView.swift */; };
 		FA856D342B7A3D4200E5A971 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856D332B7A3D4200E5A971 /* Constants.swift */; };
 		FA856D372B7A443A00E5A971 /* Extension + UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856D362B7A443A00E5A971 /* Extension + UITextField.swift */; };
+		FA856D392B7A610400E5A971 /* Extension + Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856D382B7A610400E5A971 /* Extension + Notification.swift */; };
 		FAAF15A62B698F7F00C06E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15A52B698F7F00C06E74 /* AppDelegate.swift */; };
 		FAAF15A82B698F7F00C06E74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15A72B698F7F00C06E74 /* SceneDelegate.swift */; };
 		FAAF15AA2B698F7F00C06E74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15A92B698F7F00C06E74 /* ViewController.swift */; };
@@ -185,6 +186,7 @@
 		FA856D312B7A3C3E00E5A971 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		FA856D332B7A3D4200E5A971 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA856D362B7A443A00E5A971 /* Extension + UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UITextField.swift"; sourceTree = "<group>"; };
+		FA856D382B7A610400E5A971 /* Extension + Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Notification.swift"; sourceTree = "<group>"; };
 		FAAF15A32B698F7F00C06E74 /* Fly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAF15A52B698F7F00C06E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAAF15A72B698F7F00C06E74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				FA856D362B7A443A00E5A971 /* Extension + UITextField.swift */,
+				FA856D382B7A610400E5A971 /* Extension + Notification.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1070,6 +1073,7 @@
 				FA856D342B7A3D4200E5A971 /* Constants.swift in Sources */,
 				FA856D322B7A3C3E00E5A971 /* TabView.swift in Sources */,
 				FA856D1E2B7A39D600E5A971 /* SceneDelegate.swift in Sources */,
+				FA856D392B7A610400E5A971 /* Extension + Notification.swift in Sources */,
 				FA856D372B7A443A00E5A971 /* Extension + UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

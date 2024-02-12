@@ -5,6 +5,13 @@ final class TabView: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(goToMain),
+            name: .goToMain,
+            object: nil
+        )
+        
         let mainVC = setupViewControllers(
             MainViewController(),
             title: "Main Page",
@@ -40,6 +47,10 @@ final class TabView: UITabBarController {
         vc.tabBarItem.title = title
         vc.tabBarItem.image = UIImage(systemName: image)
         return vc
+    }
+    
+    @objc private func goToMain() {
+        self.selectedIndex = 0
     }
     
 }
