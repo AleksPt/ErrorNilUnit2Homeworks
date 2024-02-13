@@ -15,6 +15,10 @@ final class MainViewController: UIViewController {
     }(UIScrollView())
     
     private lazy var scrollViewContent: UIView = {
+        let tapGesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(tapFunc)
+        )
         $0.frame = CGRect(
             x: 0,
             y: 0,
@@ -23,6 +27,7 @@ final class MainViewController: UIViewController {
         )
         $0.backgroundColor = .white
         $0.addSubview(textField)
+        $0.addGestureRecognizer(tapGesture)
         return $0
     }(UIView())
     
@@ -48,31 +53,32 @@ final class MainViewController: UIViewController {
         
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(shorOrHideKeyboard),
+            selector: #selector(showKeyboard),
             name: UIResponder.keyboardWillShowNotification,
             object: nil
         )
         
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(shorOrHideKeyboard),
-            name: UIResponder.keyboardDidHideNotification,
+            selector: #selector(hideKeyboard),
+            name: UIResponder.keyboardWillHideNotification,
             object: nil
         )
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
+    @objc private func tapFunc() {
+        scrollView.endEditing(true)
     }
     
-    @objc private func shorOrHideKeyboard(sender: Notification) {
+    @objc private func showKeyboard(sender: Notification) {
         if let rect = sender.userInfo?["UIKeyboardFrameEndUserInfoKey"] as? CGRect {
-            textField.frame.origin.y -= rect.height
-        } else if let rect = sender.userInfo?["UIKeyboardFrameBeginUserInfoKey"] as? CGRect {
-            textField.frame.origin.y += rect.height
+            scrollView.frame.origin.y -= rect.height
+        }
+    }
+    
+    @objc private func hideKeyboard(sender: Notification) {
+        if let rect = sender.userInfo?["UIKeyboardFrameEndUserInfoKey"] as? CGRect {
+            scrollView.frame.origin.y += rect.height
         }
     }
 }
-
-

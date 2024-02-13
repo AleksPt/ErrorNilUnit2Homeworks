@@ -29,6 +29,18 @@ final class CatalogViewController: UIViewController {
         title = "Sneakers"
         navigationController?.navigationBar.prefersLargeTitles = true
         view.addSubview(collectionView)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(goToShop),
+            name: .goToShop,
+            object: nil
+        )
+    }
+    
+    @objc private func goToShop(sender: Notification) {
+        let webViewVC = WebView()
+        navigationController?.pushViewController(webViewVC, animated: true)
     }
 }
 
@@ -49,6 +61,4 @@ extension CatalogViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
-    
 }
