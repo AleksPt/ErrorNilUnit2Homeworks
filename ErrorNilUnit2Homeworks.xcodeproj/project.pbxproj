@@ -76,6 +76,7 @@
 		FA856D392B7A610400E5A971 /* Extension + Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856D382B7A610400E5A971 /* Extension + Notification.swift */; };
 		FA856D3B2B7A625900E5A971 /* SneakersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856D3A2B7A625900E5A971 /* SneakersModel.swift */; };
 		FA856D3E2B7A674600E5A971 /* SneakerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856D3D2B7A674600E5A971 /* SneakerCell.swift */; };
+		FA856D432B7B5A4600E5A971 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856D422B7B5A4600E5A971 /* WebView.swift */; };
 		FAAF15A62B698F7F00C06E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15A52B698F7F00C06E74 /* AppDelegate.swift */; };
 		FAAF15A82B698F7F00C06E74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15A72B698F7F00C06E74 /* SceneDelegate.swift */; };
 		FAAF15AA2B698F7F00C06E74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF15A92B698F7F00C06E74 /* ViewController.swift */; };
@@ -191,6 +192,7 @@
 		FA856D382B7A610400E5A971 /* Extension + Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Notification.swift"; sourceTree = "<group>"; };
 		FA856D3A2B7A625900E5A971 /* SneakersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersModel.swift; sourceTree = "<group>"; };
 		FA856D3D2B7A674600E5A971 /* SneakerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakerCell.swift; sourceTree = "<group>"; };
+		FA856D422B7B5A4600E5A971 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		FAAF15A32B698F7F00C06E74 /* Fly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAF15A52B698F7F00C06E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAAF15A72B698F7F00C06E74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -502,13 +504,11 @@
 				FA856D1B2B7A39D600E5A971 /* AppDelegate.swift */,
 				FA856D1D2B7A39D600E5A971 /* SceneDelegate.swift */,
 				FA856D312B7A3C3E00E5A971 /* TabView.swift */,
-				FA856D1F2B7A39D600E5A971 /* MainViewController.swift */,
-				FA856D2D2B7A3BD300E5A971 /* CatalogViewController.swift */,
-				FA856D2F2B7A3C0900E5A971 /* CartViewController.swift */,
-				FA856D332B7A3D4200E5A971 /* Constants.swift */,
-				FA856D3A2B7A625900E5A971 /* SneakersModel.swift */,
+				FA856D442B7B63B500E5A971 /* ViewControllers */,
 				FA856D3C2B7A671100E5A971 /* Cell */,
+				FA856D3F2B7A8DF700E5A971 /* Models */,
 				FA856D352B7A441C00E5A971 /* Extensions */,
+				FA856D332B7A3D4200E5A971 /* Constants.swift */,
 				FA856D242B7A39D800E5A971 /* Assets.xcassets */,
 				FA856D262B7A39D800E5A971 /* LaunchScreen.storyboard */,
 				FA856D292B7A39D800E5A971 /* Info.plist */,
@@ -531,6 +531,25 @@
 				FA856D3D2B7A674600E5A971 /* SneakerCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA856D3F2B7A8DF700E5A971 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA856D3A2B7A625900E5A971 /* SneakersModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA856D442B7B63B500E5A971 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA856D1F2B7A39D600E5A971 /* MainViewController.swift */,
+				FA856D2D2B7A3BD300E5A971 /* CatalogViewController.swift */,
+				FA856D2F2B7A3C0900E5A971 /* CartViewController.swift */,
+				FA856D422B7B5A4600E5A971 /* WebView.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FAAF15A42B698F7F00C06E74 /* Fly */ = {
@@ -1086,6 +1105,7 @@
 				FA856D3E2B7A674600E5A971 /* SneakerCell.swift in Sources */,
 				FA856D1C2B7A39D600E5A971 /* AppDelegate.swift in Sources */,
 				FA856D342B7A3D4200E5A971 /* Constants.swift in Sources */,
+				FA856D432B7B5A4600E5A971 /* WebView.swift in Sources */,
 				FA856D322B7A3C3E00E5A971 /* TabView.swift in Sources */,
 				FA856D1E2B7A39D600E5A971 /* SceneDelegate.swift in Sources */,
 				FA856D3B2B7A625900E5A971 /* SneakersModel.swift in Sources */,

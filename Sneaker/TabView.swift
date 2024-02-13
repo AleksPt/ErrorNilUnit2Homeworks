@@ -1,7 +1,7 @@
 import UIKit
 
 final class TabView: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,5 +52,4 @@ final class TabView: UITabBarController {
     @objc private func goToMain() {
         self.selectedIndex = 0
     }
-    
 }

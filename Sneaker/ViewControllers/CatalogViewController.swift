@@ -1,8 +1,7 @@
 import UIKit
-import WebKit
 
 final class CatalogViewController: UIViewController {
-
+    
     private let collectionData = SneakersModel.mockData()
     
     private lazy var collectionView: UICollectionView = {
@@ -11,10 +10,9 @@ final class CatalogViewController: UIViewController {
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.itemSize = CGSize(
-            width: 200,
-            height: view.frame.height
+            width: view.frame.width / 2,
+            height: 300
         )
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.register(
             SneakerCell.self,
             forCellWithReuseIdentifier: SneakerCell.reuseId
@@ -22,16 +20,16 @@ final class CatalogViewController: UIViewController {
         $0.dataSource = self
         $0.showsHorizontalScrollIndicator = false
         return $0
-    }(UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()))
+    }(UICollectionView(frame: view.frame, collectionViewLayout: UICollectionViewFlowLayout()))
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .white
         title = "Sneakers"
         navigationController?.navigationBar.prefersLargeTitles = true
         view.addSubview(collectionView)
     }
-    
 }
 
 extension CatalogViewController: UICollectionViewDataSource {

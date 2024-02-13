@@ -2,8 +2,6 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
-    
-    
     private lazy var scrollView: UIScrollView = {
         $0.contentSize = scrollViewContent.frame.size
         $0.frame = CGRect(
@@ -47,8 +45,34 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(scrollView)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(shorOrHideKeyboard),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(shorOrHideKeyboard),
+            name: UIResponder.keyboardDidHideNotification,
+            object: nil
+        )
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    @objc private func shorOrHideKeyboard(sender: Notification) {
+        if let rect = sender.userInfo?["UIKeyboardFrameEndUserInfoKey"] as? CGRect {
+            textField.frame.origin.y -= rect.height
+        } else if let rect = sender.userInfo?["UIKeyboardFrameBeginUserInfoKey"] as? CGRect {
+            textField.frame.origin.y += rect.height
+        }
+    }
 }
 
 
