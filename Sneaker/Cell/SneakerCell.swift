@@ -3,8 +3,8 @@ import UIKit
 final class SneakerCell: UICollectionViewCell {
     static let reuseId = "sneakerCell"
     
-    var urls = [String: String]()
-    
+    var goToUrl: (()->())?
+        
     private lazy var sneakerImage: UIImageView = {
         $0.contentMode = .scaleAspectFit
         $0.frame = CGRect(x: frame.width / 2 - 75, y: 0, width: 150, height: 150)
@@ -53,12 +53,8 @@ final class SneakerCell: UICollectionViewCell {
         return $0
     }(UIButton(primaryAction: buyAction))
     
-    private lazy var buyAction = UIAction { _ in
-        NotificationCenter.default.post(
-            name: .goToShop,
-            object: nil,
-            userInfo: self.urls
-        )
+    private lazy var buyAction = UIAction { [weak self] _ in
+        self?.goToUrl?()
     }
     
     override init(frame: CGRect) {
@@ -84,7 +80,6 @@ final class SneakerCell: UICollectionViewCell {
         sneakerImage.image = image
         sneakerTitle.text = title
         sneakerPrice.text = "\(price) р."
-        urls["url"] = url
     }
     
 }

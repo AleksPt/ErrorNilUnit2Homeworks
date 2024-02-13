@@ -30,17 +30,6 @@ final class CatalogViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         view.addSubview(collectionView)
         
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(goToShop),
-            name: .goToShop,
-            object: nil
-        )
-    }
-    
-    @objc private func goToShop(sender: Notification) {
-        let webViewVC = WebView()
-        navigationController?.pushViewController(webViewVC, animated: true)
     }
 }
 
@@ -58,6 +47,12 @@ extension CatalogViewController: UICollectionViewDataSource {
         let url = collectionData[indexPath.item].url
         
         cell.configCell(image: image, title: title, price: price, url: url)
+        
+        cell.goToUrl = { [weak self] in
+            let webView = WebView()
+            webView.urlToShop = url
+            self?.navigationController?.pushViewController(webView, animated: true)
+        }
         
         return cell
     }

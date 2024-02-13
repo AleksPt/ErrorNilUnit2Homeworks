@@ -2,7 +2,9 @@ import UIKit
 import WebKit
 
 final class WebView: UIViewController {
-
+    
+    var urlToShop: String?
+    
     private lazy var webView: WKWebView = {
         $0.frame = CGRect(
             x: 0,
@@ -17,9 +19,9 @@ final class WebView: UIViewController {
         super.viewDidLoad()
         view.addSubview(webView)
         
-        if let url = URL(string: "https://poizon.shoes/nike") {
-            let req = URLRequest(url: url)
-            webView.load(req)
+        if let urlToShop = urlToShop, let url = URL(string: urlToShop) {
+            let request = URLRequest(url: url)
+            webView.load(request)
         }
     }    
 }
