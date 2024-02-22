@@ -91,7 +91,7 @@ final class ViewController: UIViewController {
         )
         group.contentInsets = NSDirectionalEdgeInsets(
             top: 0,
-            leading: 10,
+            leading: 0,
             bottom: 0,
             trailing: 10
         )
@@ -100,7 +100,7 @@ final class ViewController: UIViewController {
         section.orthogonalScrollingBehavior = .groupPagingCentered
         section.contentInsets = NSDirectionalEdgeInsets(
             top: 20,
-            leading: 10,
+            leading: 0,
             bottom: 0,
             trailing: 30
         )
