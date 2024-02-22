@@ -21,7 +21,7 @@ final class ActorCell: UICollectionViewCell {
     
     lazy var title: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.font = .systemFont(ofSize: 12)
+        $0.font = UIFont(name: "DIN Condensed Bold", size: 16)
         $0.textColor = .white
         return $0
     }(UILabel())

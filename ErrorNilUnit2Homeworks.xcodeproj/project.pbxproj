@@ -106,6 +106,9 @@
 		FAD347DD2B740807005892A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD347DC2B740807005892A6 /* SceneDelegate.swift */; };
 		FAD347DF2B740807005892A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD347DE2B740807005892A6 /* ViewController.swift */; };
 		FAD347E42B740808005892A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD347E32B740808005892A6 /* Assets.xcassets */; };
+		FAD61AEC2B878B1A00E2AB20 /* DelaGothicOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD61AEB2B878B1A00E2AB20 /* DelaGothicOne-Regular.ttf */; };
+		FAD61AEE2B878BF000E2AB20 /* HalvarBreit-XBd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD61AED2B878BF000E2AB20 /* HalvarBreit-XBd.ttf */; };
+		FAD61AF02B878E4100E2AB20 /* DIN Condensed Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD61AEF2B878E4100E2AB20 /* DIN Condensed Bold.ttf */; };
 		FAD89A852B6D8D0700673316 /* CocktailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD89A842B6D8D0700673316 /* CocktailModel.swift */; };
 		FAD89A872B6D9C0000673316 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD89A862B6D9C0000673316 /* Constants.swift */; };
 		FAE2DB282B6AA630005094F3 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2DB272B6AA630005094F3 /* UILabel + Extension.swift */; };
@@ -240,6 +243,9 @@
 		FAD347DE2B740807005892A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAD347E32B740808005892A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD347E82B740808005892A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD61AEB2B878B1A00E2AB20 /* DelaGothicOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DelaGothicOne-Regular.ttf"; sourceTree = "<group>"; };
+		FAD61AED2B878BF000E2AB20 /* HalvarBreit-XBd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HalvarBreit-XBd.ttf"; sourceTree = "<group>"; };
+		FAD61AEF2B878E4100E2AB20 /* DIN Condensed Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN Condensed Bold.ttf"; sourceTree = "<group>"; };
 		FAD89A842B6D8D0700673316 /* CocktailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailModel.swift; sourceTree = "<group>"; };
 		FAD89A862B6D9C0000673316 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FAE2DB272B6AA630005094F3 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
@@ -435,6 +441,9 @@
 				FA2789502B87498700A40F11 /* GenreCell.swift */,
 				FA2789462B867B9300A40F11 /* CollectionData.swift */,
 				FA2789482B867FB000A40F11 /* Extension + UIView.swift */,
+				FAD61AEB2B878B1A00E2AB20 /* DelaGothicOne-Regular.ttf */,
+				FAD61AED2B878BF000E2AB20 /* HalvarBreit-XBd.ttf */,
+				FAD61AEF2B878E4100E2AB20 /* DIN Condensed Bold.ttf */,
 				FA27893A2B86768C00A40F11 /* Main.storyboard */,
 				FA27893D2B86768E00A40F11 /* Assets.xcassets */,
 				FA27893F2B86768E00A40F11 /* LaunchScreen.storyboard */,
@@ -1006,8 +1015,10 @@
 			files = (
 				FA2789412B86768E00A40F11 /* LaunchScreen.storyboard in Resources */,
 				FA27893E2B86768E00A40F11 /* Assets.xcassets in Resources */,
+				FAD61AEC2B878B1A00E2AB20 /* DelaGothicOne-Regular.ttf in Resources */,
+				FAD61AEE2B878BF000E2AB20 /* HalvarBreit-XBd.ttf in Resources */,
 				FA27893C2B86768C00A40F11 /* Main.storyboard in Resources */,
-				FAD61AEA2B87889B00E2AB20 /* Info.plist in Resources */,
+				FAD61AF02B878E4100E2AB20 /* DIN Condensed Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

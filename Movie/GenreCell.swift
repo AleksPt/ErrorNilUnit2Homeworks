@@ -13,8 +13,8 @@ final class GenreCell: UICollectionViewCell {
     
     lazy var title: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.font = .systemFont(ofSize: 20)
         $0.textColor = .white
+        $0.font = UIFont(name: "HalvarBreit-XBd", size: 20)
         return $0
     }(UILabel())
     
