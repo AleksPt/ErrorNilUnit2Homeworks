@@ -36,6 +36,10 @@
 		FA2789412B86768E00A40F11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA27893F2B86768E00A40F11 /* LaunchScreen.storyboard */; };
 		FA2789472B867B9300A40F11 /* CollectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2789462B867B9300A40F11 /* CollectionData.swift */; };
 		FA2789492B867FB000A40F11 /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2789482B867FB000A40F11 /* Extension + UIView.swift */; };
+		FA27894B2B87493800A40F11 /* LogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27894A2B87493800A40F11 /* LogoCell.swift */; };
+		FA27894D2B87495700A40F11 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27894C2B87495700A40F11 /* PosterCell.swift */; };
+		FA27894F2B87497200A40F11 /* ActorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27894E2B87497200A40F11 /* ActorCell.swift */; };
+		FA2789512B87498700A40F11 /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2789502B87498700A40F11 /* GenreCell.swift */; };
 		FA4854852B558FAF00F48E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4854842B558FAF00F48E2E /* AppDelegate.swift */; };
 		FA4854872B558FAF00F48E2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4854862B558FAF00F48E2E /* SceneDelegate.swift */; };
 		FA4854892B558FAF00F48E2E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4854882B558FAF00F48E2E /* ProfileViewController.swift */; };
@@ -150,6 +154,10 @@
 		FA2789422B86768E00A40F11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA2789462B867B9300A40F11 /* CollectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionData.swift; sourceTree = "<group>"; };
 		FA2789482B867FB000A40F11 /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
+		FA27894A2B87493800A40F11 /* LogoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoCell.swift; sourceTree = "<group>"; };
+		FA27894C2B87495700A40F11 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		FA27894E2B87497200A40F11 /* ActorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCell.swift; sourceTree = "<group>"; };
+		FA2789502B87498700A40F11 /* GenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
 		FA4854822B558FAF00F48E2E /* Homework3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4854842B558FAF00F48E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA4854862B558FAF00F48E2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -421,6 +429,10 @@
 				FA2789342B86768C00A40F11 /* AppDelegate.swift */,
 				FA2789362B86768C00A40F11 /* SceneDelegate.swift */,
 				FA2789382B86768C00A40F11 /* ViewController.swift */,
+				FA27894A2B87493800A40F11 /* LogoCell.swift */,
+				FA27894C2B87495700A40F11 /* PosterCell.swift */,
+				FA27894E2B87497200A40F11 /* ActorCell.swift */,
+				FA2789502B87498700A40F11 /* GenreCell.swift */,
 				FA2789462B867B9300A40F11 /* CollectionData.swift */,
 				FA2789482B867FB000A40F11 /* Extension + UIView.swift */,
 				FA27893A2B86768C00A40F11 /* Main.storyboard */,
@@ -1121,8 +1133,12 @@
 			files = (
 				FA2789392B86768C00A40F11 /* ViewController.swift in Sources */,
 				FA2789492B867FB000A40F11 /* Extension + UIView.swift in Sources */,
+				FA27894B2B87493800A40F11 /* LogoCell.swift in Sources */,
+				FA27894F2B87497200A40F11 /* ActorCell.swift in Sources */,
 				FA2789472B867B9300A40F11 /* CollectionData.swift in Sources */,
+				FA2789512B87498700A40F11 /* GenreCell.swift in Sources */,
 				FA2789352B86768C00A40F11 /* AppDelegate.swift in Sources */,
+				FA27894D2B87495700A40F11 /* PosterCell.swift in Sources */,
 				FA2789372B86768C00A40F11 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
