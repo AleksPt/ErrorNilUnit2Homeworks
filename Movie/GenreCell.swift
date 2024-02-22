@@ -8,7 +8,6 @@ final class GenreCell: UICollectionViewCell {
         $0.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
         $0.layer.cornerRadius = 20
         $0.clipsToBounds = true
-        $0.addGradient()
         return $0
     }(UIView())
     
@@ -28,6 +27,11 @@ final class GenreCell: UICollectionViewCell {
     
     func setCell(data: Item) {
         self.title.text = data.genreTitle
+        self.customView.addGradient(
+            firstColor: data.colors?[0],
+            secondColor: data.colors?[1],
+            thirdColor: data.colors?[2]
+        )
     }
     
     required init?(coder: NSCoder) {

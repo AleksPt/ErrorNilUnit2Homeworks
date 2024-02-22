@@ -1007,6 +1007,7 @@
 				FA2789412B86768E00A40F11 /* LaunchScreen.storyboard in Resources */,
 				FA27893E2B86768E00A40F11 /* Assets.xcassets in Resources */,
 				FA27893C2B86768C00A40F11 /* Main.storyboard in Resources */,
+				FAD61AEA2B87889B00E2AB20 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
