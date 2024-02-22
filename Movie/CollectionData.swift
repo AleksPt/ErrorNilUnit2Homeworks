@@ -36,15 +36,15 @@ class MockData {
         ]
         
         let sectionActorsItems = [
-            Item(picture: nil, name: "Кристиан", surName: "Бейл", genreTitle: ""),
-            Item(picture: nil, name: "Деми", surName: "Мур", genreTitle: ""),
-            Item(picture: nil, name: "Дензел", surName: "Вашингтон", genreTitle: ""),
-            Item(picture: nil, name: "Джоди", surName: "Фостер", genreTitle: ""),
-            Item(picture: nil, name: "Киллиан", surName: "Мёрфи", genreTitle: ""),
-            Item(picture: nil, name: "Натали", surName: "Портман", genreTitle: ""),
-            Item(picture: nil, name: "Клинт", surName: "Иствуд", genreTitle: ""),
-            Item(picture: nil, name: "Шарлиз", surName: "Терон", genreTitle: ""),
-            Item(picture: nil, name: "Рассел", surName: "Кроу", genreTitle: "")
+            Item(picture: .bale, name: "Кристиан", surName: "Бейл", genreTitle: ""),
+            Item(picture: .demi, name: "Деми", surName: "Мур", genreTitle: ""),
+            Item(picture: .denzel, name: "Дензел", surName: "Вашингтон", genreTitle: ""),
+            Item(picture: .foster, name: "Джоди", surName: "Фостер", genreTitle: ""),
+            Item(picture: .killian, name: "Киллиан", surName: "Мёрфи", genreTitle: ""),
+            Item(picture: .natali, name: "Натали", surName: "Портман", genreTitle: ""),
+            Item(picture: .klint, name: "Клинт", surName: "Иствуд", genreTitle: ""),
+            Item(picture: .teron, name: "Шарлиз", surName: "Терон", genreTitle: ""),
+            Item(picture: .rassel, name: "Рассел", surName: "Кроу", genreTitle: "")
         ]
         
         let sectionGenresItems = [

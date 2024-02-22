@@ -4,14 +4,24 @@ final class GenreCell: UICollectionViewCell {
     
     static let reuseId = "GenreCell"
     
+    lazy var customView: UIView = {
+        $0.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        $0.layer.cornerRadius = 20
+        $0.clipsToBounds = true
+        $0.addGradient()
+        return $0
+    }(UIView())
+    
     lazy var title: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.font.withSize(15)
+        $0.font = .systemFont(ofSize: 20)
+        $0.textColor = .white
         return $0
     }(UILabel())
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        addSubview(customView)
         addSubview(title)
         setConstraints()
     }
@@ -28,10 +38,10 @@ final class GenreCell: UICollectionViewCell {
 extension GenreCell {
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: topAnchor, constant: 15),
-            title.leadingAnchor.constraint(equalTo: trailingAnchor, constant: 10),
-            title.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            title.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15)
+//            title.topAnchor.constraint(equalTo: customView.topAnchor, constant: 20),
+            title.leadingAnchor.constraint(equalTo: customView.leadingAnchor, constant: 20),
+            title.bottomAnchor.constraint(equalTo: customView.bottomAnchor, constant: -15),
+            title.trailingAnchor.constraint(equalTo: customView.trailingAnchor, constant: -15)
         ])
     }
 }
